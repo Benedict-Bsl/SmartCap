@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.iot-experiments.com/arduino-pro-mini-power-consumption/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Arduino Pro Mini: Power consumption</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --button-bg-color: #ffffff;
+            --button-text-color: var(--color-darkgrey);
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="./Arduino Pro Mini_ Power consumption_files/screen.css">
+
+    <meta name="description" content="Building a low power consumption project is not easy for a hobbyist. The Arduino Pro Mini is a good option but requires some tweaking!">
+    <link rel="canonical" href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/amp/">
+    
+    <meta property="og:site_name" content="IoT Experiments">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Arduino Pro Mini: Power consumption">
+    <meta property="og:description" content="Building a low power consumption project is not easy for a hobbyist. The Arduino Pro Mini is a good option but requires some tweaking!">
+    <meta property="og:url" content="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/">
+    <meta property="og:image" content="https://www.iot-experiments.com/content/images/2016/08/IMG_20160505_144932-1-.jpg">
+    <meta property="article:published_time" content="2016-08-25T21:46:19.000Z">
+    <meta property="article:modified_time" content="2019-03-03T13:21:38.000Z">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Arduino">
+    <meta property="article:tag" content="low power">
+    <meta property="article:tag" content="pro mini">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arduino Pro Mini: Power consumption">
+    <meta name="twitter:description" content="Building a low power consumption project is not easy for a hobbyist. The Arduino Pro Mini is a good option but requires some tweaking!">
+    <meta name="twitter:url" content="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/">
+    <meta name="twitter:image" content="https://www.iot-experiments.com/content/images/2016/08/IMG_20160505_144932-1-.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jean-Matthieu DECHRISTÉ">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Project, Arduino, low power, pro mini">
+    <meta name="twitter:site" content="@jeanmatthieud">
+    <meta name="twitter:creator" content="@jeanmatthieud">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="947">
+    
+    <script async="" src="./Arduino Pro Mini_ Power consumption_files/analytics.js.download"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "IoT Experiments",
+        "url": "https://www.iot-experiments.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.iot-experiments.com/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jean-Matthieu DECHRISTÉ",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://www.iot-experiments.com/content/images/2018/03/0.jpg",
+            "width": 200,
+            "height": 200
+        },
+        "url": "https://www.iot-experiments.com/author/jean-matthieu-dechriste/",
+        "sameAs": [
+            "https://www.dechriste.fr",
+            "https://twitter.com/jeanmatthieud"
+        ]
+    },
+    "headline": "Arduino Pro Mini: Power consumption",
+    "url": "https://www.iot-experiments.com/arduino-pro-mini-power-consumption/",
+    "datePublished": "2016-08-25T21:46:19.000Z",
+    "dateModified": "2019-03-03T13:21:38.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.iot-experiments.com/content/images/2016/08/IMG_20160505_144932-1-.jpg",
+        "width": 1280,
+        "height": 947
+    },
+    "keywords": "Project, Arduino, low power, pro mini",
+    "description": "Building a low power consumption project is not easy for a hobbyist. The Arduino Pro Mini is a good option but requires some tweaking!",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.iot-experiments.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.34">
+    <link rel="alternate" type="application/rss+xml" title="IoT Experiments" href="https://www.iot-experiments.com/rss/">
+    <script defer="" src="./Arduino Pro Mini_ Power consumption_files/portal.min.js.download" data-ghost="https://www.iot-experiments.com/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer="" src="./Arduino Pro Mini_ Power consumption_files/cards.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./Arduino Pro Mini_ Power consumption_files/cards.min.css">
+    <!-- PrismJS -->
+<link href="./Arduino Pro Mini_ Power consumption_files/prism.min.css" rel="stylesheet">
+
+<!-- Emojify
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
+-->
+
+<script async="" src="./Arduino Pro Mini_ Power consumption_files/f.txt"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-8774345115676302",
+          enable_page_level_ads: true
+     });
+</script>
+
+<style>
+.flex-container {
+    display: flex;
+}
+.flex-container img {
+    max-width: 100%;
+}
+pre[class*=language-] {
+    margin-bottom: 3em;
+}
+</style><style>:root {--ghost-accent-color: #15171A;}</style>
+
+<style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style id="fit-vids-style">.fluid-width-video-container{flex-grow: 1;width:100%;}.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="post-template tag-project tag-arduino tag-low-power tag-pro-mini">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head has-cover">
+        <nav class="gh-head-inner inner gh-container">
+
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="https://www.iot-experiments.com/">
+                        IoT Experiments
+                </a>
+                <a class="gh-burger" role="button">
+                    <div class="gh-burger-box">
+                        <div class="gh-burger-inner"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://www.iot-experiments.com/">Home</a></li>
+    <li class="nav-esp8266"><a href="https://www.iot-experiments.com/tag/esp8266/">ESP8266</a></li>
+    <li class="nav-arduino"><a href="https://www.iot-experiments.com/tag/arduino/">Arduino</a></li>
+    <li class="nav-rc"><a href="https://www.iot-experiments.com/tag/rc/">RC</a></li>
+    <li class="nav-discoeasy200"><a href="https://www.iot-experiments.com/dagoma-discoeasy200/">DiscoEasy200</a></li>
+</ul>
+
+            </div>
+            <div class="gh-head-actions">
+                <div class="gh-social">
+                        <a class="gh-social-twitter" href="https://twitter.com/jeanmatthieud" title="Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+</a>
+                </div>
+
+                    <a class="gh-head-button gh-portal-close" href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#/portal/signup" data-portal="signup">Subscribe</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+    <article class="article post tag-project tag-arduino tag-low-power tag-pro-mini ">
+
+        <header class="article-header gh-canvas">
+
+            <section class="article-tag">
+                <a href="https://www.iot-experiments.com/tag/project/">Project</a>
+            </section>
+
+            <h1 class="article-title">Arduino Pro Mini: Power consumption</h1>
+
+            <p class="article-excerpt">Building a low power consumption project is not easy for a hobbyist. The Arduino Pro Mini is a good option but requires some tweaking!</p>
+
+            <div class="article-byline">
+                <section class="article-byline-content">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/" class="author-avatar">
+                                <img class="author-profile-image" src="./Arduino Pro Mini_ Power consumption_files/0.jpg" alt="Jean-Matthieu DECHRISTÉ">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article-byline-meta">
+                        <h4 class="author-name"><a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/">Jean-Matthieu DECHRISTÉ</a></h4>
+                        <div class="byline-meta-content">
+                            <time class="byline-meta-date" datetime="2016-08-25">Aug 25, 2016</time>
+                            <span class="byline-reading-time"><span class="bull">•</span> 4 min read</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <figure class="article-image">
+                <img srcset="/content/images/size/w300/2016/08/IMG_20160505_144932-1-.jpg 300w,
+                            /content/images/size/w600/2016/08/IMG_20160505_144932-1-.jpg 600w,
+                            /content/images/size/w1000/2016/08/IMG_20160505_144932-1-.jpg 1000w,
+                            /content/images/size/w2000/2016/08/IMG_20160505_144932-1-.jpg 2000w" sizes="(min-width: 1400px) 1400px, 92vw" src="./Arduino Pro Mini_ Power consumption_files/IMG_20160505_144932-1-.jpg" alt="Arduino Pro Mini: Power consumption">
+            </figure>
+        </header>
+
+        <section class="gh-content gh-canvas">
+            <!--kg-card-begin: markdown--><p>With my low-power objective, I had to try to find ways to save power. For that, I tried different solutions to custom the Arduino Pro Mini.</p>
+<h1 id="importantremark">Important remark</h1>
+<p>As I'm doing all this as a hobby, I don't have the appropriate measuring devices.<br>
+The goal of this post is not to procure accurate measurements but only to compare the consumption of my device with different tweaks.</p>
+<h1 id="presentation">Presentation</h1>
+<p>I made the measurements with two Chinese clones of the Arduino Pro Mini 3.3V 8MHz.</p>
+<ul>
+<li>Arduino Pro mini 3.3V @ 8Mhz "<mark>RobotDyn</mark>", in black, cheap and well finished;</li>
+<li>Arduino Pro mini 3.3V @ 8Mhz "<mark>The Simple</mark>", in blue, the most common clone on the Internet (cheapest).</li>
+</ul>
+<div style="display: flex;">
+<div style="flex: 1">
+<p><img src="./Arduino Pro Mini_ Power consumption_files/IMG_20160504_235207.jpg" alt="Arduino Pro Mini fronts" loading="lazy"></p>
+</div>
+<div style="flex: 0.5">&nbsp;</div>
+<div style="flex: 1">
+<p><img src="./Arduino Pro Mini_ Power consumption_files/IMG_20160504_235409.jpg" alt="Arduino Pro Mini backs" loading="lazy"></p>
+</div>
+</div>
+<p><em>Remark: The serial pins (at the top) are not in the same order on the two boards.</em></p>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/IMG_20160505_144932.jpg" alt="Arduino Pro mini on breadboards" loading="lazy"></p>
+<h1 id="removethepowerled">Remove the power LED</h1>
+<p>It was my first attempt. And sadly, I read somewhere that cutting a trace on the board was working... <strong>It was not a good idea !</strong> After that, I was unable to program the Arduino anymore.</p>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/do-not-cut.png" alt="Arduino Pro Mini: do not cut !!" loading="lazy"></p>
+<p>To correct this mistake, I had to remove the LED, and make a small bridge with a small wire to restore the cut trace.</p>
+<p>To avoid this, you should simply create a solder bridge between the two sides of the SMD LED (to be able to heat them at the same time), and push the led  aside. After that, clean the area with a solder pump if needed.<br>
+I admit that I do not succeed at each time (sometimes, the LED burns under the effect of the heat).</p>
+<h2 id="robotdyn">RobotDyn</h2>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/arduino-pro-mini_black_power-led.jpg" alt="LED to remove" loading="lazy"></p>
+<h2 id="thesimple">The simple</h2>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/arduino-pro-mini_blue_power-led.jpg" alt="LED to remove" loading="lazy"></p>
+<h1 id="removetheregulator">Remove the regulator</h1>
+<p>To go below 3.3V, you can remove the regulator. Moreover, it will save even more power.</p>
+<h2 id="robotdyn">RobotDyn</h2>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/arduino-pro-mini_black_regulator.jpg" alt="Regulator to remove" loading="lazy"></p>
+<h2 id="thesimple">The simple</h2>
+<p><img src="./Arduino Pro Mini_ Power consumption_files/the-simple-regulator.jpg" alt="Regulator to remove" loading="lazy"></p>
+<h1 id="measurements">Measurements</h1>
+<p>Those measurements are made (without any programmer attached):</p>
+<ul>
+<li>with an empty sketch: ACTIVE mode</li>
+<li>with a sketch using the <a href="https://github.com/rocketscream/Low-Power">LowPower library</a>: POWER DOWN mode</li>
+</ul>
+<pre class=" language-clike"><code class=" language-clike"><span class="token comment">// - Empty sketch for 'active' mode</span>
+void <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+void <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-cpp"><code class=" language-cpp">// - Sketch for 'power down' mode
+#include "LowPower.h"
+
+void setup() {
+}
+
+void loop() {
+  // Sleep for 8 s with ADC module and BOD module off
+  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
+}
+</code></pre>
+<p>&nbsp;</p>
+<h2 id="thesimple8mhz">The simple @ 8MHz</h2>
+<table>
+  <tbody><tr><th>State</th><th>Input voltage</th><th>Power LED</th><th>Regulator</th><th>Consumption</th></tr>
+  <tr><td>Active</td><td>3.3V on Raw pin</td><td>On</td><td>With</td><td>4.29mA</td></tr>
+  <tr><td>Active</td><td>3.3V on Vcc pin</td><td>On</td><td>With</td><td>5mA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Raw pin</td><td>On</td><td>With</td><td>1.152mA</td></tr>
+  <tr><td>Active</td><td>3.3V on Vcc pin</td><td>Removed</td><td>With</td><td>3.62mA</td></tr>
+  <tr><td>Active</td><td>3.3V on Raw pin</td><td>Removed</td><td>With</td><td>3.21mA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Vcc pin</td><td>Removed</td><td>With</td><td>33.3µA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Raw pin</td><td>Removed</td><td>With</td><td>31.7µA</td></tr>
+  <tr><td>Active</td><td>==3.3V== on Vcc pin</td><td>Removed</td><td>Removed</td><td>==3.72mA==</td></tr>
+  <tr><td>Power down</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>==4.2µA==</td></tr>
+</tbody></table>
+<h2 id="robotdyn8mhz">RobotDyn @ 8MHz</h2>
+<p>For those measurements, supply the Arduino through the Raw pin or the Vcc pin doesn't change anything with the reliability of my measurement tools.</p>
+<table>
+  <tbody><tr><th>State</th><th>Input voltage</th><th>Power LED</th><th>Regulator</th><th>Consumption</th></tr>
+  <tr><td>Active</td><td>3.3V on Raw pin</td><td>On</td><td>With</td><td>4.89mA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Raw pin</td><td>On</td><td>With</td><td>1.40mA</td></tr>
+  <tr><td>Active</td><td>3.3V on Raw pin</td><td>Removed</td><td>With</td><td>3.62mA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Raw pin</td><td>Removed</td><td>With</td><td>86.9µA</td></tr>
+  <tr><td>Active</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>TBD</td></tr>
+  <tr><td>Power down</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>TBD</td></tr>
+</tbody></table>
+<h1 id="lowervoltagelowerfrequency">Lower voltage, lower frequency</h1>
+<p>As I said in a previous blog post, it is possible to <a href="https://www.iot-experiments.com/arduino-pro-mini-1mhz-1-8v/">use the Arduino Pro Mini at 1.8V, with a frequency of 1Mhz</a>. This should reduce the power used in active mode and power down mode, and should allow me to power my devices with two AA batteries<sup class="footnote-ref"><a href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>For that, I had to remove the power regulator (as explained before).</p>
+<h2 id="robotdyn1mhz">RobotDyn @ 1MHz</h2>
+<table>
+  <tbody><tr><th>State</th><th>Input voltage</th><th>Power LED</th><th>Regulator</th><th>Consumption</th></tr>
+  <tr><td>Active</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>952µA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>4.2µA</td></tr>
+  <tr><td>Active</td><td>1.8V on Vcc pin</td><td>Removed</td><td>Removed</td><td>509µA</td></tr>
+  <tr><td>Power down</td><td>1.8V on Vcc pin</td><td>Removed</td><td>Removed</td><td>3.6µA</td></tr>
+</tbody></table>
+<h2 id="thesimple1mhz">The simple @ 1MHz</h2>
+<table>
+  <tbody><tr><th>State</th><th>Input voltage</th><th>Power LED</th><th>Regulator</th><th>Consumption</th></tr>
+  <tr><td>Active</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>905µA</td></tr>
+  <tr><td>Power down</td><td>3.3V on Vcc pin</td><td>Removed</td><td>Removed</td><td>4.3µA</td></tr>
+  <tr><td>Active</td><td>==1.8V== on Vcc pin</td><td>Removed</td><td>Removed</td><td>==479µA==</td></tr>
+  <tr><td>Power down</td><td>1.8V on Vcc pin</td><td>Removed</td><td>Removed</td><td>==3.8µA==</td></tr>
+</tbody></table>
+<h1 id="conclusion">Conclusion</h1>
+<p>Without a lot of work, it's easy to save power with the Arduino Pro Mini.</p>
+<ul>
+<li>In "<strong>Power down</strong>" state, running at <strong>8Mhz seems to consume as much power as at 1Mhz</strong></li>
+<li>However, in "<strong>Active</strong>" state, <strong>running at 1Mhz saves a lot of power</strong> (3.5mA to 1mA at 3.3V, and around 500µA at 1.8V)</li>
+<li>It is <strong>not</strong> possible to run at <strong>1.8V and 8MHz</strong>. To be able to use the battery as most as possible, it is mandatory to run at <strong>1MHz</strong><sup class="footnote-ref"><a href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#fn1" id="fnref1:1">[1:1]</a></sup></li>
+<li>The consumption of the two modules is <strong>quite the same</strong> (and my multimeter is quite cheap).</li>
+</ul>
+<p>Now it's time to apply this method to the <a href="https://www.iot-experiments.com/tag/water-tank-project/">water tank project</a> !</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Running at 1.8V is mandatory as the power of two AA cells will go as low as 1.8V <a href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#fnref1" class="footnote-backref">↩︎</a> <a href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#fnref1:1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+<!--kg-card-end: markdown-->
+        </section>
+
+
+    </article>
+</main>
+
+
+    <section class="footer-cta ">
+        <div class="inner">
+            <h2>Sign up for more like this.</h2>
+            <a class="footer-cta-button gh-portal-close" href="https://www.iot-experiments.com/arduino-pro-mini-power-consumption/#/portal" data-portal="">
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+<aside class="read-more-wrap">
+    <div class="read-more inner">
+
+
+                    
+<article class="post-card post ">
+
+    <a class="post-card-image-link" href="https://www.iot-experiments.com/flash-vs-ty2662-v1-pcb800099/">
+        <img class="post-card-image" srcset="/content/images/size/w300/2020/02/IMG_20200207_183341-1.jpg 300w,
+                    /content/images/size/w600/2020/02/IMG_20200207_183341-1.jpg 600w,
+                    /content/images/size/w1000/2020/02/IMG_20200207_183341-1.jpg 1000w,
+                    /content/images/size/w2000/2020/02/IMG_20200207_183341-1.jpg 2000w" sizes="(max-width: 1000px) 400px, 800px" src="./Arduino Pro Mini_ Power consumption_files/IMG_20200207_183341-1.jpg" alt="Flash a VS-TY2662-V1 LCD controller" loading="lazy">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="https://www.iot-experiments.com/flash-vs-ty2662-v1-pcb800099/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">Flash a VS-TY2662-V1 LCD controller</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>How to flash a VS-TY2662-V1 controller to use a salvaged LCD screen.</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/" class="static-avatar">
+                        <img class="author-profile-image" src="./Arduino Pro Mini_ Power consumption_files/0.jpg" alt="Jean-Matthieu DECHRISTÉ" loading="lazy">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/">Jean-Matthieu DECHRISTÉ</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-02-09">Feb 9, 2020</time> <span class="bull">•</span> 3 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                    
+<article class="post-card post ">
+
+    <a class="post-card-image-link" href="https://www.iot-experiments.com/esp32-warning-light/">
+        <img class="post-card-image" srcset="/content/images/size/w300/2020/01/vlcsnap-2020-01-09-15h50m57s117.jpg 300w,
+                    /content/images/size/w600/2020/01/vlcsnap-2020-01-09-15h50m57s117.jpg 600w,
+                    /content/images/size/w1000/2020/01/vlcsnap-2020-01-09-15h50m57s117.jpg 1000w,
+                    /content/images/size/w2000/2020/01/vlcsnap-2020-01-09-15h50m57s117.jpg 2000w" sizes="(max-width: 1000px) 400px, 800px" src="./Arduino Pro Mini_ Power consumption_files/vlcsnap-2020-01-09-15h50m57s117.jpg" alt="ESP32 Warning light" loading="lazy">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="https://www.iot-experiments.com/esp32-warning-light/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">ESP32 Warning light</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>An old school warning light connected to an MQTT server thanks to an ESP32.</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/" class="static-avatar">
+                        <img class="author-profile-image" src="./Arduino Pro Mini_ Power consumption_files/0.jpg" alt="Jean-Matthieu DECHRISTÉ" loading="lazy">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/">Jean-Matthieu DECHRISTÉ</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-01-09">Jan 9, 2020</time> <span class="bull">•</span> 6 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+                    
+<article class="post-card post ">
+
+    <a class="post-card-image-link" href="https://www.iot-experiments.com/unable-to-install-haxm-windows-10-vt-x/">
+        <img class="post-card-image" srcset="https://images.unsplash.com/photo-1545658969-19d8799171f3?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ 300w,
+                    https://images.unsplash.com/photo-1545658969-19d8799171f3?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ 600w,
+                    https://images.unsplash.com/photo-1545658969-19d8799171f3?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ 1000w,
+                    https://images.unsplash.com/photo-1545658969-19d8799171f3?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ 2000w" sizes="(max-width: 1000px) 400px, 800px" src="./Arduino Pro Mini_ Power consumption_files/photo-1545658969-19d8799171f3" alt="Unable to install HAXM on Windows 10" loading="lazy">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="https://www.iot-experiments.com/unable-to-install-haxm-windows-10-vt-x/">
+            <header class="post-card-header">
+                <h2 class="post-card-title">Unable to install HAXM on Windows 10</h2>
+            </header>
+            <div class="post-card-excerpt">
+                <p>I had some difficulties to install HAXM (which requires VT-X) on Windows 10 Enterprise to develop an Android app. I will tell you this secret...</p>
+            </div>
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/" class="static-avatar">
+                        <img class="author-profile-image" src="./Arduino Pro Mini_ Power consumption_files/0.jpg" alt="Jean-Matthieu DECHRISTÉ" loading="lazy">
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="https://www.iot-experiments.com/author/jean-matthieu-dechriste/">Jean-Matthieu DECHRISTÉ</a></span>
+                <span class="post-card-byline-date"><time datetime="2019-10-01">Oct 1, 2019</time> <span class="bull">•</span> 1 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+    </div>
+</aside>
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="https://www.iot-experiments.com/">IoT Experiments</a> © 2022</section>
+            <nav class="site-footer-nav">
+                
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+<div id="extwaiokist" style="display:none" v="fekie" q="a13b3eb8" c="55.50" i="65" u="2.256" s="02142204" d="1" w="false" e="" m="BMe=" vn="unknown-fekie"><div id="extwaigglbit" style="display:none" v="fekie" q="a13b3eb8" c="55.50" i="65" u="2.256" s="02142204" d="1" w="false" e="" m="BMe="></div></div></div>
+
+
+<script src="./Arduino Pro Mini_ Power consumption_files/jquery-3.5.1.min.js.download" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+</script>
+<script src="./Arduino Pro Mini_ Power consumption_files/casper.js.download"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+<script>
+    // Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72194497-1', 'auto');
+	ga('send', 'pageview');
+    
+    // Emojify
+    /*emojify.setConfig({
+        img_dir: '/images/emojis/'
+    });
+    emojify.run();*/
+</script>
+
+<!-- PrismJS -->
+<script src="./Arduino Pro Mini_ Power consumption_files/prism.min.js.download"></script>
+<script src="./Arduino Pro Mini_ Power consumption_files/prism-bash.min.js.download"></script>
+<script src="./Arduino Pro Mini_ Power consumption_files/prism-yaml.min.js.download"></script>
+<script src="./Arduino Pro Mini_ Power consumption_files/prism-ini.min.js.download"></script>
+<script src="./Arduino Pro Mini_ Power consumption_files/prism-python.min.js.download"></script>
+
+
+
+<div id="ghost-portal-root"></div></body></html>

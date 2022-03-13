@@ -1,0 +1,16 @@
+POC device and phone connected to the same network. 
+	- the phone sends data to the network after the device has shared them.
+
+the tracking mechanism, as long as it's within the coverage area.
+
+-battery technology
+-locking mechanism
+-weight, counting mechanism.
+
+Battery mechanism... last until the end of the dosage.
+
+electric,ring wired with conductivity. on the top of the bottle to control pills in and out.
+
+
+
+
