@@ -3,13 +3,13 @@
 
 #define MOTOR_OUTPUT 8
 #define COLLECT_NUMBER 3  //Fingerprint sampling times, can be set to 1-3
-#define IRQ         6  //IRQ pin 
+#define IRQ         4  //IRQ pin 
 
 /*Use software serial when using UNO or NANO*/
 #if ((defined ARDUINO_AVR_UNO) || (defined ARDUINO_AVR_NANO))
     #include <SoftwareSerial.h>
-    SoftwareSerial Serial1(2, 3);  //RX, TX
-    SoftwareSerial wifi_con(5, 4);  
+    SoftwareSerial Serial1(6,5);  //RX, TX
+
 
     #define FPSerial Serial1
 #else
@@ -24,7 +24,6 @@ void setup(){
   Serial.begin(9600);
 
   Serial.println("initializing wifi connectivity....");
-  WirelessConnect wifi("Green","1a2z3e4r5t6");
   /*Init FPSerial*/
   FPSerial.begin(115200);
   /*Take FPSerial as communication serial of fingerprint module*/
@@ -43,58 +42,65 @@ void setup(){
     //Serial.println(desc);
     delay(1000);
   }
+  Serial.println("connected!");
 }
 
 //Blue LED Comparison mode  Yellow LED Registration mode  Red Deletion mode 
 void loop(){
-  if(digitalRead(IRQ)){
-    uint16_t i = 0;
-    /*Capture fingerprint image, 5s idle timeout, if timeout=0,Disable  the collection timeout function
-      Return 0 if succeed, otherwise return ERR_ID809
-     */
-    if((fingerprint.collectionFingerprint(/*timeout=*/5)) != ERR_ID809){
-      /*Get the time finger pressed down*/
-      /*Set fingerprint LED ring mode, color, and number of blinks 
-        Can be set as follows:
-        Parameter 1:<LEDMode>
-        eBreathing   eFastBlink   eKeepsOn    eNormalClose
-        eFadeIn      eFadeOut     eSlowBlink   
-        Paramerer 2:<LEDColor>
-        eLEDGreen  eLEDRed      eLEDYellow   eLEDBlue
-        eLEDCyan   eLEDMagenta  eLEDWhite
-        Parameter 3:<number of blinks> 0 represents blinking all the time
-        This parameter will only be valid in mode eBreathing, eFastBlink, eSlowBlink
-       */
-      fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDBlue, /*blinkCount = */3);  //blue LED blinks quickly 3 times, means it's in fingerprint comparison mode now
-      /*Wait for finger to relase */
-      while(fingerprint.detectFinger()){
-        delay(50);
-        i++;
-        if(i == 15){             //Yellow LED blinks quickly 3 times, means it's in fingerprint regisrtation mode now
-          /*Set fingerprint LED ring to always ON in yellow*/
-          fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDYellow, /*blinkCount = */3);
-        }else if(i == 30){      //Red LED blinks quickly 3 times, means it's in fingerprint deletion mode now 
-          /*Set fingerprint LED ring to always ON in red*/
-          fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDRed, /*blinkCount = */3);
-        }
-      }
-    }
-    if(i == 0){
-      /*Fingerprint capturing failed*/
-    }else if(i > 0 && i < 15){
-      Serial.println("Enter fingerprint comparison mode");
-      /*Compare fingerprints*/
-      fingerprintMatching();
-    }else if(i >= 15 && i < 30){
-      Serial.println("Enter fingerprint registration mode");
-      /*Registrate fingerprint*/
-      fingerprintRegistration();
-    }else{
-      Serial.println("Enter fingerprint deletion mode");
-      /*Delete this fingerprint*/
-      fingerprintDeletion();
-    }
+
+  if(!digitalRead(IRQ)){
+    Serial.println("Sensed your finger!");
+  }else{
+    Serial.println("nope!");
   }
+//  if(digitalRead(IRQ)){
+//    uint16_t i = 0;
+//    /*Capture fingerprint image, 5s idle timeout, if timeout=0,Disable  the collection timeout function
+//      Return 0 if succeed, otherwise return ERR_ID809
+//     */
+//    if((fingerprint.collectionFingerprint(/*timeout=*/5)) != ERR_ID809){
+//      /*Get the time finger pressed down*/
+//      /*Set fingerprint LED ring mode, color, and number of blinks 
+//        Can be set as follows:
+//        Parameter 1:<LEDMode>
+//        eBreathing   eFastBlink   eKeepsOn    eNormalClose
+//        eFadeIn      eFadeOut     eSlowBlink   
+//        Paramerer 2:<LEDColor>
+//        eLEDGreen  eLEDRed      eLEDYellow   eLEDBlue
+//        eLEDCyan   eLEDMagenta  eLEDWhite
+//        Parameter 3:<number of blinks> 0 represents blinking all the time
+//        This parameter will only be valid in mode eBreathing, eFastBlink, eSlowBlink
+//       */
+//      fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDBlue, /*blinkCount = */3);  //blue LED blinks quickly 3 times, means it's in fingerprint comparison mode now
+//      /*Wait for finger to relase */
+//      while(fingerprint.detectFinger()){
+//        delay(50);
+//        i++;
+//        if(i == 15){             //Yellow LED blinks quickly 3 times, means it's in fingerprint regisrtation mode now
+//          /*Set fingerprint LED ring to always ON in yellow*/
+//          fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDYellow, /*blinkCount = */3);
+//        }else if(i == 30){      //Red LED blinks quickly 3 times, means it's in fingerprint deletion mode now 
+//          /*Set fingerprint LED ring to always ON in red*/
+//          fingerprint.ctrlLED(/*LEDMode = */fingerprint.eFastBlink, /*LEDColor = */fingerprint.eLEDRed, /*blinkCount = */3);
+//        }
+//      }
+//    }
+//    if(i == 0){
+//      /*Fingerprint capturing failed*/
+//    }else if(i > 0 && i < 15){
+//      Serial.println("Enter fingerprint comparison mode");
+//      /*Compare fingerprints*/
+//      fingerprintMatching();
+//    }else if(i >= 15 && i < 30){
+//      Serial.println("Enter fingerprint registration mode");
+//      /*Registrate fingerprint*/
+//      fingerprintRegistration();
+//    }else{
+//      Serial.println("Enter fingerprint deletion mode");
+//      /*Delete this fingerprint*/
+//      fingerprintDeletion();
+//    }
+//  }
 }
 
 //Compare fingerprints

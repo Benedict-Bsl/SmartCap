@@ -1,4 +1,5 @@
 #include <SoftwareSerial.h>
+#include <ArduinoJson.h>
 
 #define WIRING "AT\n"
 #define NETWORK "AT+CGREG?\n"
@@ -17,60 +18,321 @@ const String SENDTOSERVER = "AT+CIPSEND=";
 #define COMA ","
 
 
+
 #define HOST "sql336.main-hosting.eu"
 #define USER "u108916292_trakrx"
 const String PASS = "F4tukub0ny3";
 #define DB   "u108916292_trakrx"
 #define PORT "3306"
 
+const char TRACKIP_HOST[] = "170.187.154.110";
+const char URL[] = "/api/v1/smartcap/update?";
+const char ATH_URL[] = "/api/v1/smartcap/auth?";
 
-//STATE OF NETWORK
-const String IpInitial = "IP INITIAL";
-const String IpStart = "IP START";
+const char auth_var[] = "device_id=";
+//const char device_id[] =  "654321";
+const char device_id[] =  "098765";
 
-const String IpConfig = "IP CONFIG";
+const char gsmStatus[] = "AT+CIPSTATUS\n";
+const char term[] ="AT+HTTPTERM\n";
+const char shut[] = "AT+CIPSHUT\n";
+const char sapbr0[] = "AT+SAPBR=0,1\n";
+const char sapbr[] = "AT+SAPBR=1,1\n";
 
-const String IpGprsact = "IP GPRSACT";
+const char internet[] = "AT+CSTT=\"iternet\",\"\",\"\"\n";
+const char ciicr[] = "AT+CIICR\n";
+const char cifsr[] = "AT+CIFSR\n";
+const char sapbr2[] = "AT+SAPBR=2,1\n";
+const char hinit[] = "AT+HTTPINIT\n";
+const char cid[] = "AT+HTTPPARA=CID, 1\n";
 
-const String IpStatus = "IP STATUS";
+const char tchy[] = "AT+CDNSGIP=www.techy8.com\n";
+const char htpara[] ="AT+HTTPPARA=";
+const char cm[] = ",";
+const char endl[] = "\n";
+const char qt[] = "\"";
+const char httppara[] = "AT+HTTPPARA?\n";
+const char u[] = "http://";
+const char POst[]= "AT+HTTPACTION=1\n";
+const char REad[] = "AT+HTTPREAD\n";
+////STATE OF NETWORK
+//const String IpInitial = "IP INITIAL";
+//const String IpStart = "IP START";
+//
+//const String IpConfig = "IP CONFIG";
+//
+//const String IpGprsact = "IP GPRSACT";
+//
+//const String IpStatus = "IP STATUS";
+//
+//const String IpTcpUdp = "TCP CONNECTING/UDP CONNECTING/";
+//
+//const String ServerList = "SERVER LISTENING";
+//
+//const String ConnectOk = "CONNECT OK";
+//
+//const String TcpUdpClosingTCP = "CLOSING/UDP CLOSING";
+//
+//const String TcpUdpClosed = "TCP CLOSED/UDP CLOSED";
+//
+//const String pdpDeact = "PDP DEACT";
 
-const String IpTcpUdp = "TCP CONNECTING/UDP CONNECTING/";
 
-const String ServerList = "SERVER LISTENING";
+SoftwareSerial gsm(7,8); // rx, tx
 
-const String ConnectOk = "CONNECT OK";
-
-const String TcpUdpClosingTCP = "CLOSING/UDP CLOSING";
-
-const String TcpUdpClosed = "TCP CLOSED/UDP CLOSED";
-
-const String pdpDeact = "PDP DEACT";
-
-
-SoftwareSerial gsm(2, 3); // rx, tx
-
-int v;
+int vn;
 int m = 0;
+char c;
+String gsmD="";
+String v;
 
 int *n;
-
-
-
+String apn="internet";
+const char url[] = "URL";
+String cid_par="CID";
+int cid_val =1;
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   gsm.begin(9600);
-  delay(1000);
+  
+  
+//  delay(10000);
 
-  //define apn connection to be used ex: (fast.t-mobile.com), T-Mobile USA
-//  String APN = "internet";
-  if (checkConn()) {
-    internet_connection();
-  }
-
+//const char dataR[]="finger_print=0&quantity=95&lat=-6.7702270&lon=39.2608260&token=";
+//  //define apn connection to be used ex: (fast.t-mobile.com), T-Mobile USA
+////  String APN = "internet";
+////  if (checkConn()) {
+////    internet_connection();
+////  }
+////  checkConn();
+//  httpCon();
+//  Serial.println("Finshed setup");
 }
 
 
+void httpCon(){
+  
+//  const char dataR[]= "finger_print=0&quantity=95&lat=-6.7702270&lon=39.2608260&token=5230ce32-2d0b-40e8-88d5-8f4ecde654aa";
+
+//  const char token[]="5230ce32-2d0b-40e8-88d5-8f4ecde654aa";
+
+
+  gsm.write(gsmStatus);
+  gsmRead(1000L,v);
+  v = "";
+  
+  Serial.println("term http");
+  gsm.write(term);
+  gsmRead(1500L,v);
+  v = "";
+  
+  Serial.println("Restarting service...");
+  gsm.write(shut);
+  gsmRead(1500L,v);
+  v = "";
+  
+  gsm.write(gsmStatus);
+  Serial.print("read status...");
+  gsmRead(2500L,v);
+  v = "";
+
+  Serial.println("first sapbr");
+  gsm.write(sapbr0);
+  gsmRead(2500L,v);
+  v = "";
+  
+  Serial.println("trying internet..");
+  
+  gsm.write(internet);
+  gsmRead(2500L,v);
+  v = "";
+  
+  Serial.println("initializing internet");
+  gsm.write(ciicr);
+  gsmRead(2500L,v);
+  v = "";
+
+  
+  Serial.println("Getting IP...");
+  gsm.write(cifsr);
+  gsmRead(2500L,v);
+  v = "";
+
+  Serial.println("second sapbr");
+  gsm.write(sapbr2);
+  gsmRead(2500L,v);
+  v = "";
+    
+  Serial.println("first sapbr");
+  gsm.write(sapbr);
+  gsmRead(8500L,v);
+  v = "";
+  
+  Serial.println("first sapbr again");
+  gsm.write(sapbr2);
+  gsmRead(2500L,v);
+  v = "";
+
+  Serial.println("init http");
+  gsm.write(hinit);
+  gsmRead(2500L,v);
+  v = "";
+  
+  Serial.println("CID init");
+  gsm.write(cid);
+  gsmRead(2500L,v);
+  v = "";
+
+  
+  Serial.println("techy8 ip");
+  gsm.write(tchy);
+  gsmRead(2500L,v);
+  delay(4000);
+
+  
+//
+//  Serial.print("post data: ");Serial.print("AT+HTTPPARA=\"");Serial.print(url);Serial.print("\",");
+//  Serial.print("\"http://");Serial.print(String(TRACKIP_HOST));Serial.print(String(URL));Serial.print(String(dataR));Serial.print(String(token));Serial.println("\"");
+//
+//  gsm.write(htpara);gsm.write(url);gsm.write(cm);gsm.write(qt);gsm.write(u);
+//  gsm.write(TRACKIP_HOST);gsm.write(URL);gsm.write(dataR);gsm.write(token);gsm.write(qt);gsm.write(endl);
+//  gsmRead(2500L, v);
+//  v = "";
+
+  http(ATH_URL,auth_var,device_id);
+  
+//  gsm.write(httppara);
+//  gsmRead(25000L, v);
+//  v="";
+  
+//
+  Serial.println("HTTPACtiON");
+  gsm.write(POst);
+  gsmRead(1500L, v);
+  v="";
+
+  Serial.println("HTTP read");
+  gsm.write(REad);
+  
+  String tokenJson = gsmRead_JsonOnly(2000L, v);
+
+  Serial.println(tokenJson);
+  StaticJsonDocument<200> responseFile;
+  
+  DeserializationError er = deserializeJson(responseFile, tokenJson);
+
+  if(er){
+    Serial.print(F("DeserializeJson() failed: "));
+    Serial.println(er.f_str());
+//    return;
+  }
+  int pillsQuantity=91;
+  String tokenV = responseFile["token"];
+  String quantity = responseFile["quantity"];
+  int fingerPrintAccepted = 0;
+  Serial.print("token: ");
+  Serial.println(tokenV);
+  Serial.print("Quantity: ");
+  Serial.println(quantity);
+  float lat_h =-6.7702270;
+  float lon_h = 39.2608260;
+  String dat_a = "&finger_print=";
+  dat_a.concat(String(fingerPrintAccepted));
+  dat_a.concat("&quantity=");
+  dat_a.concat(String(pillsQuantity));
+  dat_a.concat("&lat=");
+  dat_a.concat(String(lat_h,7));
+  dat_a.concat("&lon=");
+  dat_a.concat(String(lon_h,7));
+  dat_a.concat("&token=");
+  dat_a.concat(tokenV);
+
+  const char dataR[dat_a.length()+1];
+  strcpy(dataR, dat_a.c_str());
+
+  delay(2000);
+  http(URL,dataR);
+
+  Serial.println("HTTPACtiON");
+  gsm.write(POst);
+  gsmRead(1500L, v);
+  v="";
+
+  Serial.println("HTTP read");
+  gsm.write(REad);
+ 
+//
+//  Serial.println("READ HTTP RESPONSE");
+//  gsm.println("AT+HTTPREAD=6000,8000");
+//  gsmRead();
+//  delay(5000);
+//
+//  gsm.println("AT+HTTPREAD");
+//  gsmRead();
+//  delay(5000);
+//  gsm.println("AT+HTTPTERM");
+//  gsmRead();
+//  delay(2000);
+}
+
+void http(const char* a, const char* b, const char* c){
+  Serial.print("post data: ");Serial.print("AT+HTTPPARA=\"");Serial.print(url);Serial.print("\",");
+  Serial.print("\"http://");Serial.print(String(TRACKIP_HOST));Serial.print(String(a));Serial.print(String(b));Serial.print(String(c));Serial.println("\"");
+
+  gsm.write(htpara);gsm.write(url);gsm.write(cm);gsm.write(qt);gsm.write(u);
+  gsm.write(TRACKIP_HOST);gsm.write(a);gsm.write(b);gsm.write(c);gsm.write(qt);gsm.write(endl);
+  gsmRead(2500L, v);
+  
+}
+
+void http(const char* url_path,const char* body){
+  Serial.print("post data: ");Serial.print("AT+HTTPPARA=\"");Serial.print(url);Serial.print("\",");
+  Serial.print("\"http://");Serial.print(String(TRACKIP_HOST));Serial.print(String(url_path));Serial.print(String(body));Serial.println("\"");
+
+  gsm.write(htpara);gsm.write(url);gsm.write(cm);gsm.write(qt);gsm.write(u);
+  gsm.write(TRACKIP_HOST);gsm.write(url_path);gsm.write(body);gsm.write(qt);gsm.write(endl);
+  gsmRead(2500L, v);
+  
+}
+
+void gsmRead(uint32_t timeout_ms, String gsmD){
+  uint32_t startMillis = millis();
+  do{
+    while(gsm.available()){
+      c = gsm.read();
+      if(c=='\n'){
+//        Serial.println("end of data");
+         continue;
+      }
+      gsmD.concat(c);
+    }
+    gsmD.trim();
+  }while(millis() - startMillis < timeout_ms);
+  Serial.println(gsmD);
+}
+
+String gsmRead_JsonOnly(uint32_t timeout_ms, String gsmD){
+  uint32_t startMillis = millis();
+  do{
+    while(gsm.available()){
+      c = gsm.read();
+      if(c=='\n'){
+//        Serial.println("end of data");
+         continue;
+      }
+      gsmD.concat(c);
+    }
+//    Serial.println("replaced version");
+    gsmD.replace("+HTTPREAD:","");
+    gsmD.replace("104","");
+    gsmD.replace("\n","");
+    gsmD.replace("OK","");
+    gsmD.trim();
+  }while(millis() - startMillis < timeout_ms);
+  Serial.println(gsmD);
+  return gsmD;
+}
 
 bool checkConn() {
   Serial.print("Intializing");
@@ -98,9 +360,9 @@ bool checkConn() {
     delay(1000);
     Serial.println("Checking network ");
     while (gsm.available()) {
-      v = gsm.read();
+      vn = gsm.read();
       //      Serial.print(checkAscii(v));Serial.print(" ");
-      if (checkAscii(v) == '1') {
+      if (checkAscii(vn) == '1') {
         Serial.println("Network is good!");
         delay(500);
         return true;
@@ -397,20 +659,20 @@ char checkAscii(int k) {
 void loop() {
 
 
-  if (Serial.available()) {
-    gsm.write(Serial.read());
-
-    //    Serial.println(Serial.read());
-  }
-
-
-  if (gsm.available()) {
-    v = gsm.read();
-    Serial.write(v);
-
-    m++;
-
-  }
+    if (Serial.available()) {
+      gsm.write(Serial.read());
+  
+      //    Serial.println(Serial.read());
+    }
+  
+  
+    if (gsm.available()) {
+      vn = gsm.read();
+      Serial.write(vn);
+  
+      m++;
+  
+    }
 
 
   //  for (int i = 0; i < sizeof(v); i++) {

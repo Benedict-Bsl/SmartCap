@@ -1,0 +1,195 @@
+AT+CIPSHUT
+AT+SAPBR=1,1
+AT+SAPBR=2,1
+AT+HTTPINIT
+AT+HTTPPARA="CID",1
+AT+CSTT="internet","",""
+AT+CIICR
+AT+CIFSR
+AT+CDNSGIP="www.tech8.com"
+
+AT+HTTPPARA="CID",1
+AT+HTTPPARA="URL","http://trakrx.brik8.com/api/smartcap.php?
+AT+HTTPPARA="URL","http://170.187.154.110/api/v1/smartcap/auth?device_id=098765"
+
+http://170.187.154.110/api/v1/smartcap/update
+
+{"initialQuantity":100,"token":"5230ce32-2d0b-40e8-88d5-8f4ecde654aa","code":200,"message":"successful"}
+
+
+http://170.187.154.110/api/v1/smartcap/update?finger_print=1&quantity=333&lat=23.03949&lon=68.398393&token="fc7047e8-aee2-4ebb-b2a7-5b5dd90c5221"
+finger_print=1&quantity=333&lat=23.03949&lon=68.398393&token="1e293bcb-7e5c-4013-bd9a-ef3f6fd3dcac"
+
+AT+HTTPPARA="URL","http://170.187.154.110/api/v1/smartcap/update?finger_print=0&quantity=94&lat=-6.7702270&lon=39.2608260&token=5230ce32-2d0b-40e8-88d5-8f4ecde654aa"
+b5dd97d8-1f57-4fb0-a5d7-1c89f6366295
+http://170.187.154.110/api/v1/smartcap/update?finger_print=0&quantity=95&lat=-6.7702270&lon=39.2608260&token='5230ce32-2d0b-40e8-88d5-8f4ecde654aa'
+
+finger_print=1&quantity=809.20&lat=-6.7702270&lon=39.2608260&token='b5dd97d8-1f57-4fb0-a5d7-1c89f6366295'
+
+device_id="123456"
+
+
+    "finger_print":"0",
+    "quantity": 909.90,
+    "lat": "09809800",
+    "lon": "98797997",
+    "token": "1e293bcb-7e5c-4013-bd9a-ef3f6fd3dcac"
+
+
+AT+HTTPPARA="CONTENT","application/x-www-form-urlencoded"
+AT+HTTPDATA=3000,8000
+id=688525356&f=0&q=700&lat=39.8323&lon=45.220
+AT+HTTPACTION=1
+AT+HTTPREAD
+AT+HTTPTERM
+AT+HTTPPARA="BREAK",5000
+AT+HTTPPARA="TIMEOUT",240
+
+†˜øž`fžž†ž˜fžøž~þIntializinggood wiring
+good wiring
+good wiring
+good wiring
+good wiring
+good wiring
+
+Checking network 
+............Network is good!
+    OK    OK    STATE  PDP DEACT  
+  ERROR  
+  ERROR  
+  ERROR  
+  ERROR  
+Trying to connect to the server...
+
+ERROR
+Writing AT+CIPSEND=11 
+
+ERROR
+
+SHUT OK
+
+OK
+
+OK
+
+10.171.48.32
+
+OK
+
++CDNSGIP: 1,"www.tech8.com","99.83.154.118"
+
+OK
+
++SAPBR: 1,1,"10.162.164.94"
+
+OK
+
+OK
+
+OK
+
+RING
+
+ERROR
+
+RING
+
+OK
+
+RING
+
+RING
+
+RING
+
+RING
+
+RING
+
+RING
+
+RING
+
+RING
+
+RING
+
+ERROR
+
+OK
+
+OK
+
+DOWNLOAD
+
+OK
+
+OK
+
++HTTPACTION: 1,404,51
+
+OK
+
+OK
+
+DOWNLOAD
+
+OK
+
+ERROR
+
+DOWNLOAD
+
+OK
+
+ERROR
+
+OK
+
+DOWNLOAD
+
+OK
+
+OK
+
++HTTPACTION: 1,404,51
+
+OK
+
+OK
+
++HTTPACTION: 1,200,102
+
++HTTPREAD: 102
+{"initialQuantity":0,"token":"fc7047e8-aee2-4ebb-b2a7-5b5dd90c5221","code":200,"message":"successful"}
+OK
+
+OK
+
+OK
+
++HTTPACTION: 1,404,51
+
+OK
+
+OK
+
++HTTPACTION: 1,404,51
+
+OK
+
+OK
+
++HTTPACTION: 1,200,35
+
++HTTPREAD: 35
+{"code":200,"message":"successful"}
+OK
+
++PDP: DEACT
+
+OK
+
+OK
+
+STATE: PDP DEACT

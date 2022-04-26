@@ -1,0 +1,13 @@
+check for new token if there is none in memory.
+if there is no token in memory, fetch one from API.
+
+when token is aquired, 
+	- update data
+	
+	check for deletion of fp in token, if token of deletion is true, 
+	delete finger print
+	if token of registering in true, update or register fingerprint.
+
+	when a patient finishes or returns the cap, delete the finger print from device
+	using the same token of either delete, register or update.
+
