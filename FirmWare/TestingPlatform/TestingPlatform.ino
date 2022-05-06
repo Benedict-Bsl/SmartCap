@@ -1,7 +1,10 @@
 #include <SoftwareSerial.h>
+#include <TinyGPS.h>
 
-SoftwareSerial wifi(5, 4);
+TinyGPS gps;
 
+SoftwareSerial wifi(10, 9);
+SoftwareSerial sGps(10,9);
 #define AT_OK "AT"
 #define RESTART "AT+RST"
 #define RESPONSE "OK"
@@ -20,38 +23,39 @@ SoftwareSerial wifi(5, 4);
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
+//  initGPS();
 
 //  while(!Serial){
 //    
 //  }
 
-  wifi.begin(115200);
-  delay(50);
-  wifi.println(RESTART);
-  Serial.println("waiting restart....");
-  delay(5000);
-  int readings;
-  byte a;
-  while(wifi.available()){
-
-    readings = wifi.read();
-    //Serial.write(readings);    
-
-  }
-  Serial.println();
-
-
-//    Serial.println(((String)RESPONSE).length());
-    Serial.println("something cameBack");
-    
-//  }else{
-//    Serial.println("nothing at all");
+  wifi.begin(9600);
+//  delay(50);
+//  wifi.println(RESTART);
+//  Serial.println("waiting restart....");
+//  delay(5000);
+//  int readings;
+//  byte a;
+//  while(wifi.available()){
+//
+//    readings = wifi.read();
+//    //Serial.write(readings);    
+//
 //  }
-
-  wifi.println(RESTART);
-  Serial.println("waiting restart....");
-  delay(5000);
+//  Serial.println();
+//
+//
+////    Serial.println(((String)RESPONSE).length());
+//    Serial.println("something cameBack");
+//    
+////  }else{
+////    Serial.println("nothing at all");
+////  }
+//
+//  wifi.println(RESTART);
+//  Serial.println("waiting restart....");
+//  delay(5000);
 //  String readings;
 
 //  wifi.println((String)MODE+"?");
@@ -108,6 +112,35 @@ void setup() {
 
 }
 
+void initGPS()
+{ 
+  Serial.print("Testing TinyGPS library v. "); Serial.println(TinyGPS::library_version());
+  sGps.begin(9600);
+}
+int a = 0;
+
+void readGPS(){
+  a = 1;
+  unsigned long age;
+  float glat, glon;
+  byte month, day, hour, minute, second, hundredths;
+  int year;
+  String timeStamp;
+  for(int i = 0; i < 3000; i++){gps.encode(sGps.read());}
+  gps.f_get_position(&glat, &glon, &age);gps.crack_datetime(&year, &month, &day, &hour, &minute, &second, &hundredths, &age);
+
+   Serial.print("lat: ");Serial.println(glat);Serial.print(" lon: ");Serial.println(glon);
+//   sprintf(tsmp,"%02d/%02/%02d %02d:%02d:%02d ",month,day,year, hour, minute, second);
+   String b = String(month)+"/"+String(day)+"/"+String(year)+" "+String(hour)+":"+String(minute)+":"+String(second);
+   timeStamp = b;
+//  gps_lat = glat;
+//  gps_lon = glon;
+
+   Serial.print("timeStamp: ");
+  Serial.println(timeStamp);
+//   Serial.println(b);
+
+}
 void loop() {
 //  byte readings;
 //  if(Serial){
@@ -119,18 +152,17 @@ void loop() {
 //  }
 
 //  // put your main code here, to run repeatedly:
-//  while(Serial.available()) {
+//  if(Serial.available()) {
 //
 //    String command = Serial.readString();
 //
 //    wifi.println(command);
 //    delay(200);
-//
-//
-//    if (wifi.available()) {
-//      Serial.println(wifi.readString());
-//    }
-//  }
+//  readGPS();
+
+  if (wifi.available()) {
+    Serial.write(wifi.read());
+  }
 
 
 

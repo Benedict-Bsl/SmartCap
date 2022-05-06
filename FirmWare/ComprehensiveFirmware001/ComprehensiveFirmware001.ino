@@ -1,25 +1,11 @@
 #include "WirelessConnect.h"
-#include <DFRobot_ID809.h>
 
-#define MOTOR_OUTPUT 8
-#define COLLECT_NUMBER 3  //Fingerprint sampling times, can be set to 1-3
-#define IRQ         4  //IRQ pin 
-
-/*Use software serial when using UNO or NANO*/
-#if ((defined ARDUINO_AVR_UNO) || (defined ARDUINO_AVR_NANO))
-    #include <SoftwareSerial.h>
-    SoftwareSerial Serial1(6,5);  //RX, TX
-
-
-    #define FPSerial Serial1
-#else
-    #define FPSerial Serial1
-#endif
-
-DFRobot_ID809 fingerprint;
 //String desc;
 
 void setup(){
+
+//  DDRD &= ~(1 << IRQ);
+//  PORTB != (1 << IRQ);
   /*Init print serial*/
   Serial.begin(9600);
 
@@ -43,16 +29,22 @@ void setup(){
     delay(1000);
   }
   Serial.println("connected!");
+  Serial.println("interrupt set");
+  attachInterrupt(digitalPinToInterrupt(3), trigger, RISING);
 }
 
 //Blue LED Comparison mode  Yellow LED Registration mode  Red Deletion mode 
 void loop(){
 
-  if(!digitalRead(IRQ)){
+  if(flag==1){
+
     Serial.println("Sensed your finger!");
+        fingerMatch();
+        flag = 0;
   }else{
-    Serial.println("nope!");
+//    Serial.println("nope!");
   }
+  
 //  if(digitalRead(IRQ)){
 //    uint16_t i = 0;
 //    /*Capture fingerprint image, 5s idle timeout, if timeout=0,Disable  the collection timeout function
@@ -103,6 +95,59 @@ void loop(){
 //  }
 }
 
+void trigger(){
+  flag = 1;
+}
+void fingerMatch(){
+  uint8_t ret = 0;
+  fingerprint.ctrlLED(fingerprint.eBreathing, fingerprint.eLEDBlue, 0);
+  Serial.println("Please put your finger on the fingerPrint sensor");
+
+  if((fingerprint.collectionFingerprint(0) != ERR_ID809)){
+
+    // while collecting fingerprint, sent fingerprint mode to quick blink
+    fingerprint.ctrlLED(fingerprint.eFastBlink, fingerprint.eLEDYellow, 3);
+    Serial.println("Capturing succeds");
+    Serial.println("release finger");
+
+    while(fingerprint.detectFinger());
+    Serial.println("FingerReleased");
+    //search for the desired fingerprint
+    ret = fingerprint.search();
+
+    if(ret != 0){
+      fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDGreen, 0);
+      Serial.print("Got one: ");
+      Serial.println(ret);
+//      fingerPrintAccepted = 1;
+
+        digitalWrite(12, 0);
+      //  delay(3000);
+        digitalWrite(11,100);
+        delay(200);
+        digitalWrite(12, 0);
+        digitalWrite(11, 0);
+        delay(10000);
+        digitalWrite(12,100);
+        digitalWrite(11, 0);
+        delay(100);
+        digitalWrite(12, 0);
+        digitalWrite(11, 0);
+        delay(5000);
+    }
+    else{
+      fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDRed, 0);
+      Serial.println("Matching failed");
+//      fingerPrintAccepted = 0;
+    }
+  }
+  else{
+    fingerprint.ctrlLED(0, 0, 0);
+    Serial.println("Try again..");
+  }
+  
+}
+
 //Compare fingerprints
 void fingerprintMatching(){
   /*Compare the captured fingerprint with all fingerprints in the fingerprint library
@@ -114,9 +159,18 @@ void fingerprintMatching(){
     fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDGreen, /*blinkCount = */0);
     Serial.print("Successfully matched,ID=");
     Serial.println(ret);
-    digitalWrite(MOTOR_OUTPUT, 1);
-    delay(1000);
-    digitalWrite(MOTOR_OUTPUT, 0);
+    digitalWrite(11, 0);
+    delay(200);
+    digitalWrite(12, 0);
+    digitalWrite(11, 0);
+    delay(10000);
+    digitalWrite(12, 0);
+  //  delay(3000);
+    digitalWrite(11,100);
+    delay(200);
+    digitalWrite(12, 0);
+    digitalWrite(11, 0);
+    delay(5000);
     
   }else{
     /*Set fingerprint LED Ring to always ON in red*/

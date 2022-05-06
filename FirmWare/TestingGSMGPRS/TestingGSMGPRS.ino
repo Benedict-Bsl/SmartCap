@@ -658,7 +658,6 @@ char checkAscii(int k) {
 
 void loop() {
 
-
     if (Serial.available()) {
       gsm.write(Serial.read());
   
@@ -667,11 +666,7 @@ void loop() {
   
   
     if (gsm.available()) {
-      vn = gsm.read();
-      Serial.write(vn);
-  
-      m++;
-  
+      Serial.write(gsm.read());
     }
 
 
