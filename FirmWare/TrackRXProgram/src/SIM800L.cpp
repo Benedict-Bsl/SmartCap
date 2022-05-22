@@ -80,11 +80,10 @@ const char AT_RSP_SAPBR[] PROGMEM = "+SAPBR: 1,1";                            //
  * Constructor; Init the driver, communication with the module and shared
  * buffer used by the driver (to avoid multiples allocation)
  */
-SIM800L::SIM800L(Stream* _stream, uint8_t _pinRst, uint16_t _internalBufferSize, uint16_t _recvBufferSize, Stream* _debugStream) {
+SIM800L::SIM800L(Stream* _stream, uint8_t _pinRst, uint16_t _internalBufferSize, uint16_t _recvBufferSize) {
   // Store local variables
   stream = _stream;
-  enableDebug = _debugStream != NULL;
-  debugStream = _debugStream;
+
   pinReset = _pinRst;
 
   if(pinReset != RESET_PIN_NOT_USED) {
@@ -93,20 +92,11 @@ SIM800L::SIM800L(Stream* _stream, uint8_t _pinRst, uint16_t _internalBufferSize,
     reset();
   }
 
-  // Prepare internal buffers
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : Prepare internal buffer of "));
-    debugStream->print(_internalBufferSize);
-    debugStream->println(F(" bytes"));
-  }
+
   internalBufferSize = _internalBufferSize;
   internalBuffer = (char*) malloc(internalBufferSize);
 
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : Prepare reception buffer of "));
-    debugStream->print(_recvBufferSize);
-    debugStream->println(F(" bytes"));
-  }
+
   recvBufferSize = _recvBufferSize;
   recvBuffer = (char *) malloc(recvBufferSize);
 }
@@ -139,7 +129,7 @@ uint16_t SIM800L::doPost(const char* url, const char* headers, const char* conte
   // Define the content type
   sendCommand_P(AT_CMD_HTTPPARA_CONTENT, contentType);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to define the content type"));
+    //if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to define the content type"));
     return 702;
   }
 
@@ -147,15 +137,15 @@ uint16_t SIM800L::doPost(const char* url, const char* headers, const char* conte
   sprintf(internalBuffer, "AT+HTTPDATA=%d,%d", strlen(payload), clientWriteTimeoutMs);
   sendCommand(internalBuffer);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_DOWNLOAD)) {
-    if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to send payload to module"));
+    //if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to send payload to module"));
     return 707;
   }
 
   // Write the payload on the module
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : doPost() - Payload to send : "));
-    debugStream->println(payload);
-  }
+  // //if(enableDebug) {
+  //   debugStream->print(F("SIM800L : doPost() - Payload to send : "));
+  //   debugStream->println(payload);
+  // }
 
   purgeSerial();
   stream->write(payload);
@@ -165,7 +155,7 @@ uint16_t SIM800L::doPost(const char* url, const char* headers, const char* conte
   // Start HTTP POST action
   sendCommand_P(AT_CMD_HTTPACTION1);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to initiate POST action"));
+    //if(enableDebug) debugStream->println(F("SIM800L : doPost() - Unable to initiate POST action"));
     return 703;
   }
 
@@ -193,7 +183,7 @@ uint16_t SIM800L::doGet(const char* url, const char* headers, uint16_t serverRea
   // Start HTTP GET action
   sendCommand_P(AT_CMD_HTTPACTION0);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : doGet() - Unable to initiate GET action"));
+    //if(enableDebug) debugStream->println(F("SIM800L : doGet() - Unable to initiate GET action"));
     return 703;
   }
 
@@ -211,14 +201,14 @@ uint16_t SIM800L::readHTTP(uint16_t serverReadTimeoutMs) {
   
   // Wait answer from the server
   if(!readResponse(serverReadTimeoutMs)) {
-    if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Server timeout"));
+    //if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Server timeout"));
     return 408;
   }
 
   // Extract status information
   int16_t idxBase = strIndex(internalBuffer, "+HTTPACTION: ");
   if(idxBase < 0) {
-    if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Invalid answer on HTTP read"));
+    //if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Invalid answer on HTTP read"));
     return 703;
   }
 
@@ -228,10 +218,10 @@ uint16_t SIM800L::readHTTP(uint16_t serverReadTimeoutMs) {
   httpRC += (internalBuffer[idxBase + 16] - '0') * 10;
   httpRC += (internalBuffer[idxBase + 17] - '0') * 1;
 
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : readHTTP() - HTTP status "));
-    debugStream->println(httpRC);
-  }
+  // //if(enableDebug) {
+  //   debugStream->print(F("SIM800L : readHTTP() - HTTP status "));
+  //   debugStream->println(httpRC);
+  // }
 
   if(httpRC == 200) {
     // Get the size of the data to receive
@@ -243,11 +233,11 @@ uint16_t SIM800L::readHTTP(uint16_t serverReadTimeoutMs) {
       dataSize += (internalBuffer[idxBase + 19 + i] - '0');
     }
 
-    if(enableDebug) {
-      debugStream->print(F("SIM800L : readHTTP() - Data size received of "));
-      debugStream->print(dataSize);
-      debugStream->println(F(" bytes"));
-    }
+    //if(enableDebug) {
+    //   debugStream->print(F("SIM800L : readHTTP() - Data size received of "));
+    //   debugStream->print(dataSize);
+    //   debugStream->println(F(" bytes"));
+    // }
 
     // Ask for reading and detect the start of the reading...
     sendCommand_P(AT_CMD_HTTPREAD);
@@ -270,27 +260,27 @@ uint16_t SIM800L::readHTTP(uint16_t serverReadTimeoutMs) {
 
     if(recvBufferSize < dataSize) {
       dataSize = recvBufferSize;
-      if(enableDebug) {
-        debugStream->println(F("SIM800L : readHTTP() - Buffer overflow while loading data from HTTP. Keep only first bytes..."));
-      }
+      //if(enableDebug) {
+      //   debugStream->println(F("SIM800L : readHTTP() - Buffer overflow while loading data from HTTP. Keep only first bytes..."));
+      // }
     }
 
     // We are expecting a final OK
     if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-      if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Invalid end of data while reading HTTP result from the module"));
+      //if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Invalid end of data while reading HTTP result from the module"));
       return 705;
     }
 
-    if(enableDebug) {
-      debugStream->print(F("SIM800L : readHTTP() - Received from HTTP call : "));
-      debugStream->println(recvBuffer);
-    }
+    //if(enableDebug) {
+    //   debugStream->print(F("SIM800L : readHTTP() - Received from HTTP call : "));
+    //   debugStream->println(recvBuffer);
+    // }
   }
 
   // Close HTTP connection
   sendCommand_P(AT_CMD_HTTPTERM);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Unable to close HTTP session"));
+    //if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Unable to close HTTP session"));
     return 706;
   }
 
@@ -304,26 +294,26 @@ uint16_t SIM800L::initiateHTTP(const char* url, const char* headers) {
 
   sendCommand_P(AT_CMD_HTTPTERM);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Unable to close HTTP session"));
+    //if(enableDebug) debugStream->println(F("SIM800L : readHTTP() - Unable to close HTTP session"));
   }
   // Init HTTP connection
   sendCommand_P(AT_CMD_HTTPINIT);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to init HTTP"));
+    //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to init HTTP"));
     initiateHTTP(url, headers);
   }
 
   // Use the GPRS bearer
   sendCommand_P(AT_CMD_HTTPPARA_CID);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define bearer"));
+    //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define bearer"));
     return 702;
   }
 
   // Define URL to look for
   sendCommand_P(AT_CMD_HTTPPARA_URL, url);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define the URL"));
+    //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define the URL"));
     return 702;
   }
 
@@ -331,7 +321,7 @@ uint16_t SIM800L::initiateHTTP(const char* url, const char* headers) {
   if (headers != NULL) {
     sendCommand_P(AT_CMD_HTTPPARA_USERDATA, headers);
     if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-      if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define Headers"));
+      //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to define Headers"));
       return 702;
     }
   }
@@ -339,7 +329,7 @@ uint16_t SIM800L::initiateHTTP(const char* url, const char* headers) {
   // Enable HTTP redirection if HTTP RC 302
   sendCommand_P(AT_CMD_HTTPPARA_REDIR);
   if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-    if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to enable HTTP redirection"));
+    //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to enable HTTP redirection"));
     return 702;
   }
 
@@ -353,10 +343,10 @@ uint16_t SIM800L::initiateHTTP(const char* url, const char* headers) {
     // The release should be greater or equals to 14 to support SSL stack
     if(releaseInt >= 14) {
       isSupportSSL = true;
-      if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Support of SSL enabled"));
+      //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Support of SSL enabled"));
     } else {
       isSupportSSL = false;
-      if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Support of SSL disabled (SIM800L firware below R14)"));
+      //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Support of SSL disabled (SIM800L firware below R14)"));
     }
   }
 
@@ -366,13 +356,13 @@ uint16_t SIM800L::initiateHTTP(const char* url, const char* headers) {
     if(strIndex(url, "https://") == 0) {
       sendCommand_P(AT_CMD_HTTPSSL_Y);
       if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-        if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to switch to HTTPS"));
+        //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to switch to HTTPS"));
         return 702;
       }
     } else {
       sendCommand_P(AT_CMD_HTTPSSL_N);
       if(!readResponseCheckAnswer_P(DEFAULT_TIMEOUT, AT_RSP_OK)) {
-        if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to switch to HTTP"));
+        //if(enableDebug) debugStream->println(F("SIM800L : initiateHTTP() - Unable to switch to HTTP"));
         return 702;
       }
     }
@@ -388,7 +378,7 @@ void SIM800L::reset() {
   if(pinReset != RESET_PIN_NOT_USED)
   {
     // Some logging
-    if(enableDebug) debugStream->println(F("SIM800L : Reset"));
+    //if(enableDebug) debugStream->println(F("SIM800L : Reset"));
 
     // Reset the device
     digitalWrite(pinReset, HIGH);
@@ -399,8 +389,8 @@ void SIM800L::reset() {
     delay(1000);
   } else {
     // Some logging
-    if(enableDebug) debugStream->println(F("SIM800L : Reset requested but reset pin undefined"));
-    if(enableDebug) debugStream->println(F("SIM800L : No reset"));
+    //if(enableDebug) debugStream->println(F("SIM800L : Reset requested but reset pin undefined"));
+    //if(enableDebug) debugStream->println(F("SIM800L : No reset"));
   }
 
   // Purge the serial
@@ -824,11 +814,11 @@ void SIM800L::initRecvBuffer() {
  * Send AT command to the module
  */
 void SIM800L::sendCommand(const char* command) {
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : Send \""));
-    debugStream->print(command);
-    debugStream->println(F("\""));
-  }
+  //if(enableDebug) {
+  //   debugStream->print(F("SIM800L : Send \""));
+  //   debugStream->print(command);
+  //   debugStream->println(F("\""));
+  // }
 
   purgeSerial();
   stream->write(command);
@@ -849,14 +839,14 @@ void SIM800L::sendCommand_P(const char* command) {
  * Send AT command to the module with a parameter
  */
 void SIM800L::sendCommand(const char* command, const char* parameter) {
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : Send \""));
-    debugStream->print(command);
-    debugStream->print(F("\""));
-    debugStream->print(parameter);
-    debugStream->print(F("\""));
-    debugStream->println(F("\""));
-  }
+  //if(enableDebug) {
+  //   debugStream->print(F("SIM800L : Send \""));
+  //   debugStream->print(command);
+  //   debugStream->print(F("\""));
+  //   debugStream->print(parameter);
+  //   debugStream->print(F("\""));
+  //   debugStream->println(F("\""));
+  // }
 
   purgeSerial();
   stream->write(command);
@@ -931,7 +921,7 @@ bool SIM800L::readResponse(uint16_t timeout, uint8_t crlfToWait) {
       } else if (internalBuffer[currentSizeResponse] == '\n' && seenCR) {
         countCRLF++;
         if(countCRLF == crlfToWait) {
-          if(enableDebug) debugStream->println(F("SIM800L : End of transmission"));
+          //if(enableDebug) debugStream->println(F("SIM800L : End of transmission"));
           break;
         }
       } else {
@@ -943,24 +933,24 @@ bool SIM800L::readResponse(uint16_t timeout, uint8_t crlfToWait) {
 
       // Avoid buffer overflow
       if(currentSizeResponse == internalBufferSize) {
-        if(enableDebug) debugStream->println(F("SIM800L : Received maximum buffer size"));
+        //if(enableDebug) debugStream->println(F("SIM800L : Received maximum buffer size"));
         break;
       }
     }
 
     // If timeout, abord the reading
     if(millis() - timerStart > timeout) {
-      if(enableDebug) debugStream->println(F("SIM800L : Receive timeout"));
+      //if(enableDebug) debugStream->println(F("SIM800L : Receive timeout"));
       // Timeout, return false to parent function
       return false;
     }
   }
 
-  if(enableDebug) {
-    debugStream->print(F("SIM800L : Receive \""));
-    debugStream->print(internalBuffer);
-    debugStream->println(F("\""));
-  }
+  //if(enableDebug) {
+  //   debugStream->print(F("SIM800L : Receive \""));
+  //   debugStream->print(internalBuffer);
+  //   debugStream->println(F("\""));
+  // }
 
   // If we are here, it's OK ;-)
   return true;

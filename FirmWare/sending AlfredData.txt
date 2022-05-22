@@ -7,15 +7,16 @@ AT+CSTT="internet","",""
 AT+CIICR
 AT+CIFSR
 AT+CDNSGIP="www.tech8.com"
-
+at+httppara="content","application/json"
 AT+HTTPPARA="CID",1
 AT+HTTPPARA="URL","http://trakrx.brik8.com/api/smartcap.php?
 AT+HTTPPARA="URL","http://170.187.154.110/api/v1/smartcap/auth?device_id=098765"
-
+{device_id:98765}
 http://170.187.154.110/api/v1/smartcap/update
 
 {"initialQuantity":100,"token":"5230ce32-2d0b-40e8-88d5-8f4ecde654aa","code":200,"message":"successful"}
 
+911910 device token: fb1d59b9-c089-4bec-8fff-d24c2381a2ac
 
 http://170.187.154.110/api/v1/smartcap/update?finger_print=1&quantity=333&lat=23.03949&lon=68.398393&token="fc7047e8-aee2-4ebb-b2a7-5b5dd90c5221"
 finger_print=1&quantity=333&lat=23.03949&lon=68.398393&token="1e293bcb-7e5c-4013-bd9a-ef3f6fd3dcac"
@@ -29,11 +30,11 @@ finger_print=1&quantity=809.20&lat=-6.7702270&lon=39.2608260&token='b5dd97d8-1f5
 device_id="123456"
 
 
-    "finger_print":"0",
+    {"finger_print":"0",
     "quantity": 909.90,
     "lat": "09809800",
     "lon": "98797997",
-    "token": "1e293bcb-7e5c-4013-bd9a-ef3f6fd3dcac"
+    "token": "1e293bcb-7e5c-4013-bd9a-ef3f6fd3dcac"}
 
 
 AT+HTTPPARA="CONTENT","application/x-www-form-urlencoded"

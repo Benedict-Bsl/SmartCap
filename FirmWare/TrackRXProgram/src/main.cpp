@@ -28,7 +28,7 @@ int main(void){
   if(db){Serial.begin(9600);}
   initFP();
   if(db){Serial.println(F("Starts of the program"));}
-  sGps.begin(9600);
+
   SoftwareSerial* gsm = new SoftwareSerial(7,8);
   gsm->begin(9600);
   // delay(1000);
@@ -85,15 +85,13 @@ int main(void){
       if(db){Serial.println(sim800c->getDataReceived());}
       if(db){Serial.println(jsonRespone);}
     }//else{
-    intSensor();
   // }
   // http();
 
   //====== START THE LOOP ROUTINE HERE============
   while(true){
     //==== read gps values
-    /*
-    readGPS();
+
     if(db){Serial.print(F("gps lat; "));Serial.println(gps_lat);}
     if(db){Serial.print(F("gsp long; "));Serial.println(gps_lon);}
     if(db){Serial.println(F("Posting http content"));}
@@ -103,6 +101,7 @@ int main(void){
     //==== get value from server
     const char data[] = "value=&token=720b703c-a433-4c1f-92f4-fd6c49e63ec1";
     uint16_t rc = sim800c->doPost(buzz, content_appCoded,data, 15000, 15000); // post values with 10sec timeout
+    
     int val=0;
     if(rc == 200){
       if(db){Serial.print(F("post successful: "));}
@@ -136,8 +135,7 @@ int main(void){
     }else{
       if(db){Serial.print(F("Failed ot post error: "));}
       if(db){Serial.println(rc);}
-    }*/
-    sens();
+    }
 
     if(sv >= 400){
 

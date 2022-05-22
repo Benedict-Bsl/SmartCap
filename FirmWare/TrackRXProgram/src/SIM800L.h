@@ -49,7 +49,7 @@ class SIM800L {
     //                        (including URL and maximum payload to send through POST method)
     //  _recvBufferSize (optional) : size in bytes of the reception buffer (max data to receive from GET or POST)
     //  _debugStream (optional) : Stream opened to the debug console (Software of Hardware)
-    SIM800L(Stream* _stream, uint8_t _pinRst = RESET_PIN_NOT_USED, uint16_t _internalBufferSize = 128, uint16_t _recvBufferSize = 256, Stream* _debugStream = NULL);
+    SIM800L(Stream* _stream, uint8_t _pinRst = RESET_PIN_NOT_USED, uint16_t _internalBufferSize = 128, uint16_t _recvBufferSize = 256);
     ~SIM800L();
 
     // Force a reset of the module
