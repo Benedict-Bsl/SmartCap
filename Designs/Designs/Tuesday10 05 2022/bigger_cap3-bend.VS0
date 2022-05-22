@@ -1,0 +1,631 @@
+ noid =            0
+ init smain             981739600
+ Before Check ISPARSE            2
+ ITOSCA NLCASE ISPARSE CONTACT INTEL_NLCASE            0           1           2
+ F           0
+ SMA CASI_DIRECT =            0 F
+ ITOTSZ     1732508
+ ndofpn           3
+ MPROP_PLAS: imat,sigyld,etan,rkin =            1  0.000000000000000E+000
+  0.000000000000000E+000  0.000000000000000E+000
+ char_Lnth,dist_max,dx2,dy2,dz2 =   6.595837598491578E-003
+  1.251098444223020E-002  5.282760350277247E-003  2.605165237983769E-003
+  2.968270673307006E-003
+ IPCG_FUNC           1
+ RNEQ NFREQ =    36477.0000000000                1
+ ISEULR           1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.38076    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0           0
+ NEL_RIGID MAXELM+NSET R_RIGID            0        7476  0.000000000000000E+000
+ SPRINGK_MAX RATIO_K   0.000000000000000E+000  0.000000000000000E+000
+ R_SMALL_ANGLE,R_GAP,R_NMT,R_NSET,EMX/EMIN I_PCGSWITCH = 
+  0.000000000000000E+000  1.000000000000000E+020  0.000000000000000E+000
+  0.000000000000000E+000                     NaN           1
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        248800.000000000     
+ aesize =   6.223998688467037E-004
+ aesize_shell =   6.223998688467037E-004
+ LCTYPE            0
+ max_dsp =   3.638362123727976E-002
+ LARGE_DEF: num_steps,kstp,fac_load =           56           1
+  1.785714285714286E-002
+ LRGDEF_CHK_EQUI: dd,d,r =   4.015957341304568E-002  4.015957341304568E-002
+   1.00000000000000     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.32827    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   1.355455409835806E-002  0.000000000000000E+000
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   4.679098629540850E-003  3.915141660751583E-002
+  0.119512881907895     
+ LARGE_DEF: SRATIO =   1.633547416535383E-011
+ LARGE_DEF: kstp,fac_load_1,ratio_l =            1  2.449479434695090E-002
+   1.37170848342925     
+ LARGE_DEF: ratio_init =   0.116512657677306     
+ LRGDEF_CHK_EQUI: dd,d,r =   4.679098629540850E-003  3.915141660751583E-002
+  0.119512881907895     
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.49290    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          59
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   1.100031678256931E-002  1.355455409835806E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.665037899585614E-003  4.677298213234068E-002
+  0.163877468361926     
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.38841    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           59          59
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   1.129178205394681E-002  1.100031678256931E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.793364099864847E-004  4.674978761625867E-002
+  3.836090368122121E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    12.95170    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           59          83
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   1.127716257800136E-002  1.129178205394681E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   2.320830331577116E-005  4.677292107598262E-002
+  4.961910178342137E-004
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           83         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           2  1.785714285714286E-002  4.202891976324146E-002
+  0.000000000000000E+000           0   1.37121175345953     
+  4.961910178342137E-004
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.07517    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   1.128244902611388E-002  1.127716257800136E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   7.400405465493759E-002  0.120469504822448     
+  0.614296993782843     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.07137    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.707291445805907E-002  1.128244902611388E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.507860655563900E-002  0.119347338530989     
+  0.126342210402319     
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.06411    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          58
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   2.802699956259281E-002  3.707291445805907E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.325079976967653E-002  0.130827545935702     
+  0.101284478546964     
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    12.98994    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           58          59
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.134842447575681E-002  2.802699956259281E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   6.206667847402638E-004  0.131091244153956     
+  4.734616630927250E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    12.98372    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           59          81
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.138286597120686E-002  3.134842447575681E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.446702147855992E-003  0.136207232513015     
+  3.998834751550766E-002
+ LARGE_DEF: Equilibrium Iterating. =            5
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.10337    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           81          81
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.244071746538223E-002  3.138286597120686E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.095711665547931E-004  0.135726200860247     
+  3.754405290394010E-003
+ LARGE_DEF: Equilibrium Iterating. =            6
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.13522    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           81          83
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.232473850964784E-002  3.244071746538223E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.161892214486954E-003  0.134638215357244     
+  8.629735706196281E-003
+ LARGE_DEF: Equilibrium Iterating. =            7
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.11134    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           83          83
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.211001666842574E-002  3.232473850964784E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.737694995759688E-005  0.134686454369867     
+  4.260038637592485E-004
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           83         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           3  4.202891976324146E-002  5.943239364301678E-002
+  0.000000000000000E+000           0   8.44595257286463     
+  4.260038637592485E-004
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.17952    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   3.211827507257380E-002  3.211001666842574E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   8.224258593836030E-002  0.212840825507128     
+  0.386404186050321     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.19388    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   5.532550633157891E-002  3.211827507257380E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.265928851609471E-002  0.214191184930593     
+  5.910275215199385E-002
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.12906    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          62
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   4.843578693785162E-002  5.532550633157891E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.654129985348031E-003  0.216700787757109     
+  2.609187554816605E-002
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.09572    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           62          67
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   4.968039997739680E-002  4.843578693785162E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   8.098304319640767E-004  0.217362498530556     
+  3.725713669279672E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.06111    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           67          84
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   4.977803132315530E-002  4.968039997739680E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.109978568210629E-004  0.217992149130839     
+  3.261575518457417E-003
+ LARGE_DEF: Equilibrium Iterating. =            5
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.08813    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           84          85
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   4.990061800887308E-002  4.977803132315530E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.406841681615128E-006  0.217989298653119     
+  2.480324362260966E-005
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           85         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           4  5.943239364301678E-002  7.403914464867417E-002
+  0.000000000000000E+000           0  0.875423021728884     
+  2.480324362260966E-005
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.94270    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   4.989316121399863E-002  4.990061800887308E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   8.690200203096984E-002  0.297178363783152     
+  0.292423717947318     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.83794    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   6.979750418589406E-002  4.989316121399863E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.873168602915330E-003  0.298339342833898     
+  2.638997769495915E-002
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.91926    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          67
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   6.434045112399873E-002  6.979750418589406E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   3.010357979861121E-003  0.296429983901093     
+  1.015537612033725E-002
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.56404    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           67          74
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   6.461297891350816E-002  6.434045112399873E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.241785660411316E-004  0.295766448676314     
+  2.448481121784270E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.46720    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           74          88
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   6.448906252962890E-002  6.461297891350816E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.093936167613897E-005  0.295719168234868     
+  1.722558668759732E-004
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           88         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           5  7.403914464867417E-002  9.112524383429284E-002
+  0.000000000000000E+000           0  0.384819427955677     
+  1.722558668759732E-004
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.50539    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   6.450473732602058E-002  6.448906252962890E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   0.105199689878553       0.390560487122289     
+  0.269355690980624     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.47457    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   8.581708760192340E-002  6.450473732602058E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   6.576358774841261E-003  0.390510535743880     
+  1.684041318453551E-002
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.62484    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          70
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   7.945248367776810E-002  8.581708760192340E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   6.020575115681867E-003  0.384832745305961     
+  1.564465391554768E-002
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.59738    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           70          71
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   7.886115324487962E-002  7.945248367776810E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.678795875968116E-003  0.383298273907009     
+  4.379868082514261E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.60916    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           71          82
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   7.869643940265678E-002  7.886115324487962E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.268485622865472E-003  0.382153633082074     
+  3.319308029692453E-003
+ LARGE_DEF: Equilibrium Iterating. =            5
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.55854    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           82          85
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   7.859159171007127E-002  7.869643940265678E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.349355678388992E-005  0.382087068148896     
+  1.923476686608250E-004
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           85         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           6  9.112524383429284E-002  0.113325208696319     
+  0.000000000000000E+000           0  0.928994659698381     
+  1.923476686608250E-004
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.49543    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   7.859208941849902E-002  7.859159171007127E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   0.119906781567253       0.489955673408634     
+  0.244729856342022     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    13.68063    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.100325495738285       7.859208941849902E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.969901099795971E-003  0.487456583493418     
+  1.224704168935812E-002
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.38244    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          73
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   9.339901617909391E-002  0.100325495738285     
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.065516442368979E-002  0.477458058980311     
+  2.231644062401131E-002
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.74250    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           73          73
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   9.193044674818282E-002  9.339901617909391E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.652538598047516E-003  0.475905791084640     
+  3.472406995260985E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.70327    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           73          84
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   9.194455022036173E-002  9.193044674818282E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   3.706374056905373E-003  0.472612012618365     
+  7.842318768774665E-003
+ LARGE_DEF: Equilibrium Iterating. =            5
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.67367    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           84          84
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   9.157284039583012E-002  9.194455022036173E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   4.027519066753997E-005  0.472572574128242     
+  8.522540848214887E-005
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           84         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           7  0.113325208696319       0.145851057533303     
+  0.000000000000000E+000           0   2.25846762187658     
+  8.522540848214887E-005
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.42624    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   9.161023281648337E-002  9.157284039583012E-002
+  0.000000000000000E+000
+ LRGDEF_CHK_EQUI: dd,d,r =   0.130101276320470       0.589458212894997     
+  0.220713315167000     
+ LARGE_DEF: Augmentation no. =            1
+ LARGE_DEF: Search no. =            1
+ LARGE_DEF: Equilibrium Iterating. =            1
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.59653    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.113397094990900       9.161023281648337E-002
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   7.513710780694261E-003  0.583845398614327     
+  1.286935000006333E-002
+ LARGE_DEF: Equilibrium Iterating. =            2
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.52192    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           20          73
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.106131913184309       0.113397094990900     
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.793264716490102E-002  0.567814120133472     
+  3.158189718967491E-002
+ LARGE_DEF: Equilibrium Iterating. =            3
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.82360    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           73          73
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.103779828802916       0.106131913184309     
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   1.150180194424840E-003  0.566692218022776     
+  2.029638237203768E-003
+ LARGE_DEF: Equilibrium Iterating. =            4
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.78432    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           73          90
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.103831201255296       0.103779828802916     
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   5.554759644891684E-003  0.561783202625764     
+  9.887728253406012E-003
+ LARGE_DEF: Equilibrium Iterating. =            5
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.89508    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =           90          90
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.103294303997839       0.103831201255296     
+  0.000000000000000E+000
+ ***** NGAP_CUR NGAP_PRV R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_PRV R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LRGDEF_CHK_EQUI: dd,d,r =   2.192360462038228E-004  0.561962093721972     
+  3.901260399109567E-004
+ LARGE_DEF: converg. ifac_prog0,ifac_prog =           90         100
+ ***** NGAP_CUR NGAP_PRV2 R_NCLOSE *****            0           0
+  1.000000000000000E+016
+ ***** NMC_CUR NMC_CUR_N R_NCLOSE2 *****            0           0
+  1.000000000000000E+016
+ LARGE_DEF:kstp,fac_load_prv,fac_load,r_upmax,num_up,r_incmax,ratio =
+           8  0.145851057533303       0.195210895630098     
+  0.000000000000000E+000           0   4.87167026722374     
+  3.901260399109567E-004
+ ISOFT_NEW,SOFTS =            0  9.999999974752427E-007
+ io_cut,iprecond =            1           1
+ RATIO_FR =    14.75928    
+ Before PCGLSS_F: ifac_prog0,ifac_prog =            0          20
+ RMSEC_MIN RMSEC_MAX =    153490.000000000        32616266.0000000     
+ STRN,STRN_SAVE,DPSTRN =   0.103384604127173       0.103294303997839     
