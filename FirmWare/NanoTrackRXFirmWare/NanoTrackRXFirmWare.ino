@@ -1,150 +1,93 @@
 #include "WirelessConnect.h"
 
 //String desc;
+uint8_t ret;
+void setup() {
 
-void setup(){
-
-//  DDRD &= ~(1 << IRQ);
-//  PORTB != (1 << IRQ);
+  //  DDRD &= ~(1 << IRQ);
+  //  PORTB != (1 << IRQ);
   /*Init print serial*/
-  Serial.begin(9600);
+  Serial.begin(115200);
   D1Mini.begin(9600);
-  Serial.println("initializing wifi connectivity....");
+  Serial.println("initializing ....");
   /*Init FPSerial*/
   FPSerial.begin(115200);
   /*Take FPSerial as communication serial of fingerprint module*/
   fingerprint.begin(FPSerial);
-
-  pinMode(MOTOR_OUTPUT, OUTPUT);
   /*Wait for Serial to open*/
-  while(!Serial);
+  while (!Serial);
   /*Test whether the device can properly communicate with mainboard
     Return true or false
-    */
-  while(fingerprint.isConnected() == false){
+  */
+  while (fingerprint.isConnected() == false) {
     Serial.println("Communication with device failed, please check connection");
     /*Get error code information*/
     //desc = fingerprint.getErrorDescription();
     //Serial.println(desc);
     delay(1000);
   }
-  pinMode(4,OUTPUT);
+  pinMode(4, OUTPUT);
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
-  
+
   Serial.println("connected!");
   Serial.println("interrupt set");
-  intSensor();
 
   attachInterrupt(digitalPinToInterrupt(3), trigger, RISING);
-  
+
 }
 
-//Blue LED Comparison mode  Yellow LED Registration mode  Red Deletion mode 
-void loop(){
+//Blue LED Comparison mode  Yellow LED Registration mode  Red Deletion mode
+void loop() {
 
-  if(flag==1){
+  int select = sikiliza();
+  if (flag == 1) {
 
     Serial.println("Sensed your finger!");
-        FPSerial.listen();
-        fingerMatch();
-        flag = 0;
+    FPSerial.listen();
+    fingerPrint(select);
+    flag = 0;
   }
 
-    sikiliza();
 
+//  if(somaNumber()) {
+//    Serial.println("Writing to d1..");
+//    D1Mini.write("1111");
+//    delay(250);
+//  }
 }
 
-void trigger(){
+void trigger() {
   flag = 1;
 }
-void fingerMatch(){
-  uint8_t ret = 0;
+void fingerPrint(int slct) {
+  ret = 0;
   fingerprint.ctrlLED(fingerprint.eBreathing, fingerprint.eLEDBlue, 0);
   Serial.println("Please put your finger on the fingerPrint sensor");
 
-  if((fingerprint.collectionFingerprint(0) != ERR_ID809)){
+  if ((fingerprint.collectionFingerprint(0) != ERR_ID809)) {
 
-    // while collecting fingerprint, sent fingerprint mode to quick blink
-    fingerprint.ctrlLED(fingerprint.eFastBlink, fingerprint.eLEDYellow, 3);
-    Serial.println("Capturing succeds");
-    Serial.println("release finger");
-
-    ret = fingerprint.search();
-
-    if(ret != 0){
-      fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDGreen, 0);
-      Serial.print("Got one: ");
-      Serial.println(ret);
-//      fingerPrintAccepted = 1;
-        Serial.println(F("Writing to motor"));
-        digitalWrite(12, 0);
-      //  delay(3000);
-        digitalWrite(11,100);
-        delay(200);
-        digitalWrite(12, 0);
-        digitalWrite(11, 0);
-        delay(10000);
-        digitalWrite(12,100);
-        digitalWrite(11, 0);
-        delay(100);
-        digitalWrite(12, 0);
-        digitalWrite(11, 0);
-        delay(500);
-        while(!somaNumber()){
-          delay(250);
-        }
+    switch (slct){
+      case 2:
+        deleteFingerprint(5);
+        break;
+      case 3:
+        registerFingerprint();
+        break;
+      default:
+        fingerMatch();
     }
-    else{
-      fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDRed, 0);
-      Serial.println("Matching failed");
-//      fingerPrintAccepted = 0;
-    }
+
   }
-  else{
+  else {
     Serial.println("Try again..");
   }
   fingerprint.ctrlLED(/*LEDMode = */fingerprint.eNormalClose, /*LEDColor = */fingerprint.eLEDBlue, /*blinkCount = */0);
-  
-}
 
-//Compare fingerprints
-void fingerprintMatching(){
-  /*Compare the captured fingerprint with all fingerprints in the fingerprint library
-    Return fingerprint ID number(1-80) if succeed, return 0 when failed
-   */
-  uint8_t ret = fingerprint.search();
-  if(ret != 0){
-    /*Set fingerprint LED ring to always ON in green*/
-    fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDGreen, /*blinkCount = */0);
-    Serial.print("Successfully matched,ID=");
-    Serial.println(ret);
-    digitalWrite(11, 0);
-    delay(200);
-    digitalWrite(12, 0);
-    digitalWrite(11, 0);
-    delay(10000);
-    digitalWrite(12, 0);
-  //  delay(3000);
-    digitalWrite(11,100);
-    delay(200);
-    digitalWrite(12, 0);
-    digitalWrite(11, 0);
-    delay(5000);
-    
-  }else{
-    /*Set fingerprint LED Ring to always ON in red*/
-    fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDRed, /*blinkCount = */0);
-    Serial.println("Matching failed");
-  }
-  delay(1000);
-  /*Turn off fingerprint LED Ring*/
-
-  Serial.println("-----------------------------");
 }
 
 //Fingerprint Registration
-void fingerprintRegistration(){
+void registerFingerprint(){
   uint8_t ID,i;
   /*Compare the captured fingerprint with all fingerprints in the fingerprint library
     Return fingerprint ID number(1-80) if succeed, return 0 when failed
@@ -213,27 +156,65 @@ void fingerprintRegistration(){
   Serial.println("-----------------------------");
 }
 
-
-//Fingerprint deletion
-void fingerprintDeletion(){
-  uint8_t ret;
+void deleteFingerprint(uint8_t id){
   /*Compare the captured fingerprint with all the fingerprints in the fingerprint library 
     Return fingerprint ID(1-80) if succeed, return 0 when failed 
    */
-  ret = fingerprint.search();
-  if(ret){
-    /*Set fingerprint LED ring to always ON in green*/
-    fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDGreen, /*blinkCount = */0);
-    fingerprint.delFingerprint(ret);
-    Serial.print("deleted fingerprint,ID=");
-    Serial.println(ret);
-  }else{
-    /*Set fingerprint LED ring to always ON in red*/
-    fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDRed, /*blinkCount = */0);
-    Serial.println("Matching failed or the fingerprint hasn't been registered");
-  }
-  delay(1000);
-  /*Turn off fingerprint LED ring*/
-  fingerprint.ctrlLED(/*LEDMode = */fingerprint.eNormalClose, /*LEDColor = */fingerprint.eLEDBlue, /*blinkCount = */0);
-  Serial.println("-----------------------------");
+    if(id){
+      /*Set fingerprint LED ring to always ON in green*/
+      fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDGreen, /*blinkCount = */0);
+
+      for(ret = 1; ret < id; ret ++){
+        if(fingerprint.verify(ret)>0){
+          fingerprint.delFingerprint(ret);
+          Serial.print("deleted fingerprint,ID=");
+          Serial.println(ret);
+        }
+      }
+    }else{
+      /*Set fingerprint LED ring to always ON in red*/
+      fingerprint.ctrlLED(/*LEDMode = */fingerprint.eKeepsOn, /*LEDColor = */fingerprint.eLEDRed, /*blinkCount = */0);
+      Serial.println("Matching failed or the fingerprint hasn't been registered");
+    }
+    delay(1000);
+    /*Turn off fingerprint LED ring*/
+    fingerprint.ctrlLED(/*LEDMode = */fingerprint.eNormalClose, /*LEDColor = */fingerprint.eLEDBlue, /*blinkCount = */0);
+    Serial.println("-----------------------------");
 }
+void fingerMatch(){
+  // while collecting fingerprint, sent fingerprint mode to quick blink
+  fingerprint.ctrlLED(fingerprint.eFastBlink, fingerprint.eLEDYellow, 3);
+  Serial.println("Capturing succeds");
+  Serial.println("release finger");
+
+  ret = fingerprint.search();
+
+  if (ret != 0) {
+    fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDGreen, 0);
+    Serial.print("Got one: ");
+    Serial.println(ret);
+    //      fingerPrintAccepted = 1;
+    Serial.println(F("Writing to motor"));
+    digitalWrite(12, 0);
+    //  delay(3000);
+    digitalWrite(11, 100);
+    delay(200);
+    digitalWrite(12, 0);
+    digitalWrite(11, 0);
+    delay(10000);
+    digitalWrite(12, 100);
+    digitalWrite(11, 0);
+    delay(100);
+    digitalWrite(12, 0);
+    digitalWrite(11, 0);
+    delay(500);
+
+  }
+  else {
+    fingerprint.ctrlLED(fingerprint.eKeepsOn, fingerprint.eLEDRed, 0);
+    Serial.println("Matching failed");
+    //      fingerPrintAccepted = 0;
+  }
+}
+
+

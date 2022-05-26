@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial gsm(12,14);
-//SoftwareSerial gsm(2,0);
+//SoftwareSerial gsm(12,14);
+SoftwareSerial gsm(2,0);
 //#include <ArduinoJson.h>
 //#define WIRING "AT\n"
 //#define NETWORK "AT+CGREG?\n"
@@ -661,11 +661,11 @@ void setup(){
 }
 void loop() {
 
-    if (Serial.available()) {
-      gsm.write(Serial.read());
-  
-//          Serial.println(Serial.read());
-    }
+//    if (Serial.available()) {
+//      gsm.write(Serial.read());
+//  
+////          Serial.println(Serial.read());
+//    }
 //  
   
     if (gsm.available()) {
