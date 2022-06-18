@@ -1,15 +1,14 @@
 #include <SoftwareSerial.h>
 #include "jsonlib.h"
 #include <TinyGPS.h>
-//#include <Wire.h>
-//#include <APDS9930.h>
+#include <APDS9930.h>
 
 uint8_t buzzinger;
 #define DEFAULT_TIMEOUT 5000
 uint32_t st = 0;
 int quantity ;
 String t;
-
+APDS9930 apds = APDS9930();
 TinyGPS gps;
 
 enum PowerMode {MINIMUM, NORMAL, POW_UNKNOWN, SLEEP, POW_ERROR};
@@ -37,9 +36,10 @@ uint16_t dataSize = 0;
 //SoftwareSerial Serial1(6,5);
 
 SoftwareSerial sGps(2, 0);
+SoftwareSerial nano(13,16);
 //SoftwareSerial gsm(12,14);
 SoftwareSerial* stream = new SoftwareSerial(12, 14);
-SoftwareSerial nano(16,13);
+
 
 
 //declared functions.
@@ -97,8 +97,6 @@ const char AT_RSP_DOWNLOAD[] PROGMEM = "DOWNLOAD";                            //
 const char AT_RSP_HTTPREAD[] PROGMEM = "+HTTPREAD: ";                         // Expected answer HTTPREAD
 const char AT_RSP_SAPBR[] PROGMEM = "+SAPBR: 1,1";                            // Expected answer SAPBR: 1,1
 
-
-
 const char URL[] = "170.187.154.110/api/v1/smartcap/update?";
 char ATH_URL[] = "170.187.154.110/api/v1/smartcap/auth?";
 String stat = "value=&token=";
@@ -118,6 +116,13 @@ int sv = 0;
 // void clearGsm();
 // void gsmRead(uint32_t);
 void customDelay(uint32_t);
+void net();
+void reconnect(const char *);
+void updateCap();
+void buzzer();
+void reuploadZero();
+void ISR(void);
+void sens();
 
 void customDelay(uint32_t timeout_ms) {
   uint32_t startMil = millis();

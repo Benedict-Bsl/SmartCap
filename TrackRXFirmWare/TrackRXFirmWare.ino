@@ -1,12 +1,13 @@
 #include "SmartCap.h"
 #define timerPreload 80000000
-#define timeTowait 20
+#define timeTowait 5
 
 uint16_t rt;
 uint16_t rc;
 http con= http();
 volatile boolean flag = false;
-
+uint16_t proximity_data = 0;
+volatile boolean flag2 = false;
 void setup() {
 
   // put your setup code here, to run once:
@@ -14,12 +15,18 @@ void setup() {
   sGps.begin(9600);
   stream->begin(9600);
   nano.begin(9600);
+  pinMode(A0, INPUT);
+//  pinMode(TX, FUNCTION_3);
+//  pinMode(TX,INPUT);
+
   //   readGPS();
   //init GSM
   //  initGsm();
 //  Serial.println(F("Get extra mem"));
   //    Serial.println(F("AT commands start"));
+  intSensor();
   readGPS();
+  delay(10000);
   if (!con.isReady()) {
     Serial.println(F("MT not ready"));
   }
@@ -28,11 +35,11 @@ void setup() {
   net();
   // Initiate HTTP/S session with the module
   
-  char tkn[] = "device_id=911911";
+  char tkn[] = "device_id=123-000";
   //Serial.println(ATH_URL);
   strcat(ATH_URL,tkn);
-//  Serial.print(F("posting at:"));
-//  Serial.println(ATH_URL);
+  Serial.print(F("posting at:"));
+  Serial.println(ATH_URL);
   rt = con.doPostD(ATH_URL, content_appCoded, 10000, 10000);
   while (rt != 200) {
     Serial.println(F("."));
@@ -53,69 +60,61 @@ void setup() {
   Serial.print(F("pills quantity: ")); Serial.println(quantity);
   Serial.print(F("token: ")); Serial.println(t);
 
-  //   }
-  //   else{
-  //
-  //   }
-  //  //internet connection
-  //  net();
-  //  //get Token
-  //  getToken();
-  pinMode(16, OUTPUT);
-  pinMode(13, OUTPUT);
-  digitalWrite(16, LOW);
-  digitalWrite(13, LOW);
 
-  noInterrupts();
-  timer0_isr_init();
-  timer0_attachInterrupt(ISR);
-  timer0_write(ESP.getCycleCount() + timerPreload * timeTowait);
-  interrupts();
+//  noInterrupts();
+//  timer0_isr_init();
+//  timer0_attachInterrupt(ISR);
+//  timer0_write(ESP.getCycleCount() + timerPreload);
+  Serial.println("Interrupt should start");
+//  attachInterrupt(1, sens, FALLING);
+//  interrupts();
 }
 bool pillCtrl=false;
-char ck;
+char ck='0';
 void loop() {
   //  if(sGps.available()){
   //    Serial.write(sGps.read());
 
-  if(flag){
-    Serial.println(F("intterupts occured!"));
-//    noInterrupts();
-    Serial.println(F("GPS data: "));
-    sGps.listen();
-    readGPS();
-    Serial.println(F("Buzzer"));
-    buzzer();
-    Serial.println(F("updating cap"));
-    updateCap();
-    flag=false;
-    timer0_write(ESP.getCycleCount() + timerPreload * timeTowait);
+//  Serial.println(F("intterupts occured!"));
+////    noInterrupts();
+  Serial.println(F("GPS data: "));
+  sGps.listen();
+  readGPS();
+  Serial.println(F("Buzzer"));
+  buzzer();
+  Serial.println(F("updating cap"));
+  updateCap();
+//    flag=false;
+//    timer0_write(ESP.getCycleCount() + timerPreload);
 //    interrupts();   
-  }
-  nano.listen();
-  while(nano.available()>0){
-    Serial.print(F("Got: "));
-    ck = nano.parseInt();
-    if(ck == 1){
-      pillCtrl = true;
+  Serial.print(F("Trg value: "));
+  Serial.println(analogRead(A0));
+//  if(flag2){
+  Serial.println(F("Sensor..."));
+  int trg = analogRead(A0);
+  Serial.print(F("trigger value: "));
+  Serial.println(trg);
+  while(trg < 1020){
+    pillCtrl = somaNumber();
+    if(pillCtrl){
+      quantity = quantity - 1;
+      Serial.print(ck);
+      Serial.print(F(" Remaining: "));
+      Serial.println(quantity);
+      pillCtrl = false;
     }
-    
+    trg = analogRead(A0);
+    if(trg > 1020){
+      flag2 = false;
+    }
   }
-  if(pillCtrl){
-    quantity = quantity - ck;
-    Serial.print(ck);
-    Serial.print(F(" Remaining: "));
-    Serial.println(quantity);
-    pillCtrl = false;
-  }
-  //  if(stream->available()){
-  //    Serial.write(stream->read());
-  //  }
-  //  if(Serial.available()){
-  //    stream->write(Serial.read());
-  //  }
+//  }
 
+}
 
+void IRAM_ATTR sens(){
+  flag2 = true;
+  
 }
 
 void updateCap(){
@@ -138,6 +137,10 @@ void updateCap(){
     if (rt >= 300 && rt <= 710) {
       Serial.println(F("Reconnecting..."));
       reconnect(apn);
+    }
+    if(rt == 403){
+      Serial.println(F("no updates..."));
+      break;
     }
     rt = con.doPostDU(URL,dataTosend, content_appCoded,5000, 10000);
     Serial.println(rt);
@@ -173,19 +176,31 @@ void buzzer() {
 //    digitalWrite(16,HIGH);
     Serial.println(F("Writing 1 to nano"));
     nano.write("1");
-//    digitalWrite(4, 1);
-//    delay(100);
-//    digitalWrite(4,0);
-//    delay(500);
-//    digitalWrite(4, 1);
-//    delay(100);
-//    digitalWrite(4,0);
-//    delay(500);
-//    digitalWrite(4, 1);
-//    delay(1000);
   }else if(buzzinger == 4){
     Serial.println(F("Writing 4 to nano"));
     nano.write("4");
+    reuploadZero();
+  }else if(buzzinger == 2){
+    Serial.println(F("Sending delete fingerprint"));
+    nano.write("2");
+    reuploadZero();
+  }else if(buzzinger == 3){
+    Serial.println(F("Sending register fingerprint"));
+    nano.write("3");
+    reuploadZero();
+  }
+  else {
+    nano.write("0");
+//    digitalWrite(16,LOW);
+//    nano.write("0");
+//    digitalWrite(4, 0);
+  }
+  Serial.print(F("Buzzer :"));
+  Serial.println(buzzinger);
+
+}
+
+void reuploadZero(){
     Serial.println(F("Then reupload 0"));
     stat = "value=0&token=" + t;
     char ch[(stat.length()) + 1];
@@ -204,16 +219,6 @@ void buzzer() {
       rc = con.doPostDU(buzz,ch, content_appCoded,5000, 6000);
     }
     Serial.println(F("Successfully reuploaded 0"));
-  }
-  else {
-    nano.write("0");
-//    digitalWrite(16,LOW);
-//    nano.write("0");
-//    digitalWrite(4, 0);
-  }
-  Serial.print(F("Buzzer :"));
-  Serial.println(buzzinger);
-
 }
 void net() {
 
@@ -262,73 +267,81 @@ void ISR(void){
   timer0_write(ESP.getCycleCount() + timerPreload * timeTowait);
   flag = true;
 }
-//void initGsm(){
-//  Serial.println(F("Starting gsm init"));
-//  // delay(1000);
-//  sim800c = new SIM800L((Stream *)gsm, 1, 200, 512);
-//  // setupModule();
-//  Serial.println(F("Checking ready"));
-//  while(!sim800c->isReady()){
-//    if(db){Serial.println(F("Problem to connect wiht AT commands"));}
-//  }
-//  uint8_t signal = sim800c->getSignal();
-//
-//  while(signal <= 0){
-//    signal = sim800c->getSignal();
-//  }
-//
-//  //reest if not connected
-//  if(db){Serial.print(F("Signal: "));Serial.println(signal);}
-//  NetworkRegistration net = sim800c->getRegistrationStatus();
-//
-//  while(net!=REGISTERED_HOME && net!= REGISTERED_ROAMING){
-//    net = sim800c->getRegistrationStatus();
-//  }
-//  if(db){Serial.println(F("Registered"));}
-//
-//}
-//
-//void net(){
-//  bool sucss = sim800c->setupGPRS("Internet");
-//  while(!sucss){
-//    sucss = sim800c->setupGPRS("internet");
-//    customDelay(5000);
-//  }
-//  if(db){Serial.print(F("disconnect :"));}
-//  if(db){Serial.println(sim800c->disconnectGPRS());}
-//
-//  bool connected = sim800c->connectGPRS();
-//  // connect to internet
-//  if(connected){ if(db){Serial.println(F("connected with ip: "));Serial.println(sim800c->getIP());}}
-//  else{if(db){Serial.println(F("Not connected"));}}
-//}
-//
-//void getToken(){
-//  const char tkn[] = "device_id=123456";
-//  if(db){Serial.println(F("geting token"));}
-//  uint8_t rt = sim800c->doPost(ATH_URL, content_appCoded,tkn, 10000, 10000);
-//
-//  if(rt == 200){
-//      if(db){Serial.print(F("post successful: "));}
-//      const size_t cap = sim800c->getDataSizeReceived();
-//      if(db){Serial.print(cap);}
-//      if(db){Serial.println(F(" bytes"));}
-//      if(db){Serial.println(F("Received: "));}
-//      // Serial.println(sim800c->getDataReceived());
-//      const String jsonResponse = sim800c->getDataReceived();
-//      uint8_t val = jsonExtract(jsonResponse, "initialQuantity").toInt();
-//      String token = jsonExtract(jsonResponse,"token");
-//      if(db){Serial.println(val);}
-//      if(db){Serial.println(token);}
-//      if(db){Serial.println(F(" got"));}
-//      delay(200);
-//      if(db){Serial.println(sim800c->getDataReceived());}
-//      if(db){Serial.println(jsonResponse);}
-//    }
-//    else{
-//      if(db){
-//        Serial.println(rt);
-//        Serial.println("failed to post");
-//    }
-//    }
-//}
+
+bool intSensor() {
+  
+  // Initialize APDS-9930 (configure I2C and initial values)
+  if ( apds.init() ) {
+    if(db){Serial.println(F("APDS-9930 initialization complete"));}
+  } else {
+    if(db){Serial.println(F("Something went wrong during APDS-9930 init!"));}
+    return false;
+  }
+
+  if ( apds.enableProximitySensor(false) ) {
+    if(db){Serial.println(F("Proximity sensor is now running"));}
+  } else {
+    if(db){Serial.println(F("Something went wrong during sensor init!"));}
+    return false;
+  }
+
+#ifdef DUMP_REGS
+  /* Register dump */
+  uint8_t reg;
+  uint8_t val;
+
+  for(reg = 0x00; reg <= 0x19; reg++) {
+    if( (reg != 0x10) && \
+        (reg != 0x11) )
+    {
+      apds.wireReadDataByte(reg, val);
+      if(db){
+        Serial.print(reg, HEX);
+        Serial.print(F(": 0x"));
+        Serial.println(val, HEX);
+      }
+    }
+  }
+  apds.wireReadDataByte(0x1E, val);
+  if(db){
+    Serial.print(0x1E, HEX);
+    Serial.print(F(": 0x"));
+    Serial.println(val, HEX);
+  }
+
+#endif
+  return true;
+}
+
+uint16_t a = 0;
+bool vl= 0;
+
+bool somaNumber(){
+  if ( !apds.readProximity(proximity_data) ) {
+    Serial.println(F("Error reading proximity value"));
+  } else {
+    if(proximity_data > 280 && proximity_data <315){
+      a= 300;
+      
+    }else if(proximity_data > 315 && proximity_data < 410){
+      a = 400;
+    }else if(proximity_data > 410 && proximity_data < 510){
+      a = 500;
+    }
+
+    Serial.println(proximity_data);
+    if(a >= 400){
+      
+    Serial.print(" ");
+    Serial.print("removed: ");       
+    Serial.println(1);
+      vl=true;
+      delay(2000);
+    }
+    else{
+      vl = false;
+    }
+    
+  }
+  return vl;
+}

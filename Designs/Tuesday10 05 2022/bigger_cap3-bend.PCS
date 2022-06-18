@@ -1,0 +1,3468 @@
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:05:25 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 0
+		Implicit: 7476
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 0
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 7.6218e+08
+	Total Iterations In PCG: 45
+	Average Iterations Per Load Case: 45.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 0.000893619
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			0
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		6
+******************************************************************************
+	Total PCG Solver Elapsed Time: 7 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 949.001 MB
+	Estimate of Memory Usage In CG : 8.10469 MB
+	Estimate of Disk Usage   : 10.3505 MB
+	*** Implicit Matrix Multiplication Activated : Mode 3 ***
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 7
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:31 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 9.84624e+08
+	Total Iterations In PCG: 80
+	Average Iterations Per Load Case: 80.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.70336e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			4
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		5
+******************************************************************************
+	Total PCG Solver Elapsed Time: 10 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 976.084 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 10
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:36 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 6.55349e+08
+	Total Iterations In PCG: 47
+	Average Iterations Per Load Case: 47.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.95575e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 972.351 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:43 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.16423e+09
+	Total Iterations In PCG: 98
+	Average Iterations Per Load Case: 98.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.21733e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		4
+******************************************************************************
+	Total PCG Solver Elapsed Time: 6 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 984.361 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 6
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:47 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 8.14997e+08
+	Total Iterations In PCG: 63
+	Average Iterations Per Load Case: 63.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.55071e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 976.738 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:52 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 9.34734e+08
+	Total Iterations In PCG: 75
+	Average Iterations Per Load Case: 75.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.18835e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 944.878 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:06:57 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.23408e+09
+	Total Iterations In PCG: 105
+	Average Iterations Per Load Case: 105.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.53191e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 953.886 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:02 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 6.4537e+08
+	Total Iterations In PCG: 46
+	Average Iterations Per Load Case: 46.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.70393e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 953.609 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:08 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.56335e+09
+	Total Iterations In PCG: 138
+	Average Iterations Per Load Case: 138.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.33613e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		4
+******************************************************************************
+	Total PCG Solver Elapsed Time: 6 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 953.079 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:527.751 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 6
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:11 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.13429e+09
+	Total Iterations In PCG: 95
+	Average Iterations Per Load Case: 95.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.33416e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 947.668 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:16 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.55337e+09
+	Total Iterations In PCG: 137
+	Average Iterations Per Load Case: 137.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.9243e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 947.214 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:20 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.25403e+09
+	Total Iterations In PCG: 107
+	Average Iterations Per Load Case: 107.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.34282e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1028.9 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:599.787 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:24 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.59329e+09
+	Total Iterations In PCG: 141
+	Average Iterations Per Load Case: 141.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.15412e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1031.22 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:790.374 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:26 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.54339e+09
+	Total Iterations In PCG: 136
+	Average Iterations Per Load Case: 136.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.9753e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 2 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1029.48 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 2
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:33 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.76291e+09
+	Total Iterations In PCG: 158
+	Average Iterations Per Load Case: 158.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.77157e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		3
+******************************************************************************
+	Total PCG Solver Elapsed Time: 6 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1034.45 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 6
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:37 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 7.05239e+08
+	Total Iterations In PCG: 52
+	Average Iterations Per Load Case: 52.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.67939e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1035.5 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:45 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.06225e+09
+	Total Iterations In PCG: 188
+	Average Iterations Per Load Case: 188.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.13351e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		5
+******************************************************************************
+	Total PCG Solver Elapsed Time: 8 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1030.77 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:1053.83 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 8
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:49 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.91258e+09
+	Total Iterations In PCG: 173
+	Average Iterations Per Load Case: 173.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.33043e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1028.34 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:54 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.0423e+09
+	Total Iterations In PCG: 186
+	Average Iterations Per Load Case: 186.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.75579e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		3
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1025.81 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:07:57 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.96247e+09
+	Total Iterations In PCG: 178
+	Average Iterations Per Load Case: 178.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.98496e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1027.79 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:03 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.15206e+09
+	Total Iterations In PCG: 197
+	Average Iterations Per Load Case: 197.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.37093e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1017.18 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:552.141 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:08 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 8.54909e+08
+	Total Iterations In PCG: 67
+	Average Iterations Per Load Case: 67.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.35506e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1009.53 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:15 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.40151e+09
+	Total Iterations In PCG: 222
+	Average Iterations Per Load Case: 222.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.92238e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		4
+******************************************************************************
+	Total PCG Solver Elapsed Time: 7 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1015.47 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:848.99 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 7
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:19 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.23188e+09
+	Total Iterations In PCG: 205
+	Average Iterations Per Load Case: 205.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.66422e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 989.551 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:24 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.32168e+09
+	Total Iterations In PCG: 214
+	Average Iterations Per Load Case: 214.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.1298e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 982.486 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:30 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.47135e+09
+	Total Iterations In PCG: 229
+	Average Iterations Per Load Case: 229.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.41195e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 985.272 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:34 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 9.24756e+08
+	Total Iterations In PCG: 74
+	Average Iterations Per Load Case: 74.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.66573e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 983.024 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:42 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.62102e+09
+	Total Iterations In PCG: 244
+	Average Iterations Per Load Case: 244.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.94298e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		5
+******************************************************************************
+	Total PCG Solver Elapsed Time: 8 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 993.987 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 8
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:46 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.34164e+09
+	Total Iterations In PCG: 216
+	Average Iterations Per Load Case: 216.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.4365e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 991.984 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:51 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.52124e+09
+	Total Iterations In PCG: 234
+	Average Iterations Per Load Case: 234.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.76446e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 992.843 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:1311.68 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:08:54 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.46138e+09
+	Total Iterations In PCG: 228
+	Average Iterations Per Load Case: 228.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.45466e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 989.15 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:00 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.67091e+09
+	Total Iterations In PCG: 249
+	Average Iterations Per Load Case: 249.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.10705e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		3
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 984.545 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:05 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 9.74646e+08
+	Total Iterations In PCG: 79
+	Average Iterations Per Load Case: 79.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.62272e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 998.057 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:13 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.78067e+09
+	Total Iterations In PCG: 260
+	Average Iterations Per Load Case: 260.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.61961e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		5
+******************************************************************************
+	Total PCG Solver Elapsed Time: 8 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1049.26 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:728.713 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 8
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:17 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.36159e+09
+	Total Iterations In PCG: 218
+	Average Iterations Per Load Case: 218.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.33171e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1075.52 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:22 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.75074e+09
+	Total Iterations In PCG: 257
+	Average Iterations Per Load Case: 257.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.23184e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1072.66 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:982.84 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:25 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.56116e+09
+	Total Iterations In PCG: 238
+	Average Iterations Per Load Case: 238.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.07421e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1070.5 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:31 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.80063e+09
+	Total Iterations In PCG: 262
+	Average Iterations Per Load Case: 262.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.04592e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1052.45 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:1001.96 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:36 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.05447e+09
+	Total Iterations In PCG: 87
+	Average Iterations Per Load Case: 87.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.98735e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1064.88 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:45 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.83056e+09
+	Total Iterations In PCG: 265
+	Average Iterations Per Load Case: 265.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.27461e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		6
+******************************************************************************
+	Total PCG Solver Elapsed Time: 9 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1059.43 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:1013.43 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 9
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:49 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.34164e+09
+	Total Iterations In PCG: 216
+	Average Iterations Per Load Case: 216.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.94111e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1081.44 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:826.044 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:54 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.77069e+09
+	Total Iterations In PCG: 259
+	Average Iterations Per Load Case: 259.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.58446e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1078.58 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:09:58 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.61105e+09
+	Total Iterations In PCG: 243
+	Average Iterations Per Load Case: 243.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.42971e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	1
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1086.66 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:929.3 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:03 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.88045e+09
+	Total Iterations In PCG: 270
+	Average Iterations Per Load Case: 270.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.96124e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1076.75 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:08 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.15425e+09
+	Total Iterations In PCG: 97
+	Average Iterations Per Load Case: 97.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.59364e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		2
+******************************************************************************
+	Total PCG Solver Elapsed Time: 5 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1082.34 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 5
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:17 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.81061e+09
+	Total Iterations In PCG: 263
+	Average Iterations Per Load Case: 263.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.29841e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		5
+******************************************************************************
+	Total PCG Solver Elapsed Time: 8 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1092.1 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:1005.79 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 8
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:20 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.91258e+09
+	Total Iterations In PCG: 173
+	Average Iterations Per Load Case: 173.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.7563e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	0
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 3 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1062.76 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 3
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:27 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.88045e+09
+	Total Iterations In PCG: 270
+	Average Iterations Per Load Case: 270.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.35725e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		3
+******************************************************************************
+	Total PCG Solver Elapsed Time: 6 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1083.16 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:1513.48 MFlops
+	Solve With Precond MFLOP Rate:1032.56 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 6
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:31 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.0844e+09
+	Total Iterations In PCG: 90
+	Average Iterations Per Load Case: 90.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.33422e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		1
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 1088.63 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:40 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 2.85052e+09
+	Total Iterations In PCG: 267
+	Average Iterations Per Load Case: 267.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 8.95712e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			1
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		6
+******************************************************************************
+	Total PCG Solver Elapsed Time: 8 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 915.234 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A MFLOP Rate:748.333 MFlops
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 8
+******************************************************************************
+******************************************************************************
+(C) Copyright 1992-2015
+Computational Applications and System Integration Inc.
+All rights Reserved.
+******************************************************************************
+
+Job:I:\POC devel\Designs\Tuesday10 05 2022\bigger_cap3-bend	at:Tue May 10 16:10:44 2022
+
+
+	Degrees of Freedom: 36552
+		DOFs per node = 3 {1,2,3}
+		ALL_NODE_EXT_SAME = TRUE
+	Single Point Constraints: 100
+	Multipoint Constraints: 0
+	Elements: 7476 (0d Elements:0;1d Elements:0;2d Elements:0;3d Elements:7476)
+		Assembled: 7476
+		Implicit: 0
+
+		 Type	   Number
+		 ----	---------
+		   92	      7476
+
+		 Contact Elements(12,26,48,49,52): 0
+	Nodes: 12184
+	Number of Load Cases: 1
+
+	Nonzeros in Upper Triangular part of
+	             Global Stiffness Matrix : 1419648
+	Nonzeros in Preconditioner: 956070
+		*** Precond Reorder: MLD ***
+		*** Matrix changed: Yes ***
+		Nonzeros in V: 218988
+		Nonzeros in factor: 663978
+	*** Primal Preconditioner Activated ***
+	*** Edgeweight Selector: L2 distance ***
+		VTAeV: 0 Sec
+	*** Iterative Solver: CG ***
+
+	Total Operation Count: 1.76291e+09
+	Total Iterations In PCG: 158
+	Average Iterations Per Load Case: 158.000000
+	Input PCG Error Tolerance: 0.0001
+	Achieved PCG Error Tolerance: 9.90672e-05
+
+	DETAILS OF SOLVER CP TIME(secs)		Elapsed
+		Assembly			2
+		Preconditioner Construction	1
+		Preconditioner Factoring	0
+		Preconditioned CG		0
+******************************************************************************
+	Total PCG Solver Elapsed Time: 4 secs
+******************************************************************************
+	Available Physical Memory (RAM) : 916.475 MB
+	Estimate of Memory Usage In CG : 20.7293 MB
+	Estimate of Disk Usage   : 22.9752 MB
+	CG Working Set Size with matrix outofcore : 7.18685 MB
+******************************************************************************
+	Multiply with A time in secs 0
+	Solve With Precond MFLOP Rate:0 MFlops
+******************************************************************************
+	*** Parallel Processing activated ***
+		Processors: 16
+		Compute Threads: 16
+		IO Threads: 1
+		Threads in ThreadPool: 16
+******************************************************************************
+	Total Elapsed Time (Secs): 4
+******************************************************************************

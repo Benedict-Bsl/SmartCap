@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
 //SoftwareSerial gsm(12,14);
-SoftwareSerial gsm(2,0);
+SoftwareSerial gsm(RX,TX);
 //#include <ArduinoJson.h>
 //#define WIRING "AT\n"
 //#define NETWORK "AT+CGREG?\n"
@@ -657,7 +657,9 @@ SoftwareSerial gsm(2,0);
 //}
 void setup(){
   Serial.begin(9600);
+//  pinMode(1,FUNCTION_3);
   gsm.begin(9600);
+ 
 }
 void loop() {
 
