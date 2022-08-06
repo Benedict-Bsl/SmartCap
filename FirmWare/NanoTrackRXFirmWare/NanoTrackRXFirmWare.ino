@@ -28,12 +28,13 @@ void setup() {
   }
   pinMode(4, OUTPUT);
   pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(9, OUTPUT);
   pinMode(8, OUTPUT);
-
   Serial.println("connected!");
   Serial.println("interrupt set");
 
-  attachInterrupt(digitalPinToInterrupt(3), trigger, RISING);
+  attachInterrupt(digitalPinToInterrupt(IRQ), trigger, RISING);
 
 }
 
@@ -195,18 +196,18 @@ void fingerMatch(){
     Serial.println(ret);
     //      fingerPrintAccepted = 1;
     Serial.println(F("Writing to motor"));
-    digitalWrite(12, 0);
+    digitalWrite(8, 0);
     //  delay(3000);
-    digitalWrite(11, 100);
+    digitalWrite(9, 100);
     delay(200);
-    digitalWrite(12, 0);
-    digitalWrite(11, 0);
+    digitalWrite(8, 0);
+    digitalWrite(9, 0);
     delay(10000);
-    digitalWrite(12, 100);
-    digitalWrite(11, 0);
+    digitalWrite(8, 100);
+    digitalWrite(9, 0);
     delay(100);
-    digitalWrite(12, 0);
-    digitalWrite(11, 0);
+    digitalWrite(8, 0);
+    digitalWrite(9, 0);
     delay(500);
 
   }

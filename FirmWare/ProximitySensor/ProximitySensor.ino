@@ -64,10 +64,10 @@ void setup() {
     Serial.println(F("Something went wrong during APDS-9930 init!"));
   }
   
-  // // Adjust the Proximity sensor gain
-  // if ( !apds.setProximityGain(PGAIN_2X) ) {
-  //   Serial.println(F("Something went wrong trying to set PGAIN"));
-  // }
+//   // Adjust the Proximity sensor gain
+//   if ( !apds.setProximityGain(PGAIN_2X) ) {
+//     Serial.println(F("Something went wrong trying to set PGAIN"));
+//   }
   
   // Start running the APDS-9930 proximity sensor (no interrupts)
   if ( apds.enableProximitySensor(false) ) {

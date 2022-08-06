@@ -2,18 +2,18 @@ bool db = true;
 
 #include <SoftwareSerial.h>
 #include "DFRobot_ID809.h"
-#include <APDS9930.h>
+//#include <APDS9930.h>
 
 #define COLLECT_NUMBER 3  //Fingerprint sampling times, can be set to 1-3
-#define IRQ         6  //IRQ pin 
+#define IRQ         3  //IRQ pin 
 
 //D1MINI 10,9
 //fp 6,5
-SoftwareSerial Serial1(6,5);
-SoftwareSerial D1Mini(10,9);
+SoftwareSerial Serial1(11,10);
+SoftwareSerial D1Mini(12,13);
 
 #define FPSerial Serial1
-APDS9930 apds = APDS9930();
+//APDS9930 apds = APDS9930();
 uint16_t proximity_data = 0;
 
 DFRobot_ID809 fingerprint;
@@ -107,17 +107,17 @@ int sikiliza(){
     else if(mtCtrl){
       Serial.println(F("Bottom locking mechanism.."));
       digitalWrite(7,1);
-      digitalWrite(8,0);
+      digitalWrite(6,0);
       delay(150);
       digitalWrite(7,0);
-      digitalWrite(8,0); 
+      digitalWrite(6,0); 
       delay(15000);
       Serial.println(F("Back again..."));
       digitalWrite(7,0);
-      digitalWrite(8,1);
+      digitalWrite(6,1);
       delay(130);
       digitalWrite(7,0);
-      digitalWrite(8,0); 
+      digitalWrite(6,0); 
       delay(10000);
 
       mtCtrl = false;
@@ -125,7 +125,7 @@ int sikiliza(){
     else if(ck=='0'){
       digitalWrite(4,0);  
       digitalWrite(7,0);
-      digitalWrite(8,0);
+      digitalWrite(6,0);
     }
   return 0;
 
