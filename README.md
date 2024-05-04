@@ -21,7 +21,7 @@ a bottle could be smart in helping older people or pantient with periodic memory
   - d1Mini_serverAccess : Cloud server access firmware
   - cv : dataset for pill image dettection
   - circuitry : circuit and related files
-
+##### :) don't mind the huge size of the bottle ( or the cap(the green/white thing)... it's only a prototype ... ahaha, wait,.. it's a proof of concepts!
 The above project is proprietary/private , for non commercial usage. Make sure you site the author in any related work. 
 Interests, critics...? on the project?, 
 please contact the author: benobusole@gmail.com | migarajun@outlook.com 
